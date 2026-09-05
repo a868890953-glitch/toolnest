@@ -1,0 +1,108 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GPA Calculator - ToolNest</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f6f8fc;
+      color: #1e293b;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .box {
+      max-width: 500px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    }
+
+    input {
+      width: 90%;
+      padding: 12px;
+      margin: 8px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+
+    button {
+      padding: 12px 25px;
+      background: #2563eb;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 20px;
+      color: #2563eb;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="box">
+    <h1>🎓 GPA Calculator</h1>
+
+    <p>Enter your grade points separated by commas.</p>
+
+    <input
+      type="text"
+      id="grades"
+      placeholder="Example: 8, 9, 7, 10"
+    >
+
+    <br>
+
+    <button onclick="calculateGPA()">Calculate GPA</button>
+
+    <div id="result"></div>
+
+    <a href="index.html">← Back to ToolNest</a>
+  </div>
+
+  <script>
+    function calculateGPA() {
+      let input = document.getElementById("grades").value;
+
+      let grades = input
+        .split(",")
+        .map(Number)
+        .filter(value => !isNaN(value));
+
+      if (grades.length === 0) {
+        document.getElementById("result").innerText =
+          "Please enter valid grade points.";
+        return;
+      }
+
+      let total = grades.reduce((sum, grade) => sum + grade, 0);
+      let gpa = total / grades.length;
+
+      document.getElementById("result").innerText =
+        "Your GPA: " + gpa.toFixed(2);
+    }
+  </script>
+
+</body>
+</html>
+```
