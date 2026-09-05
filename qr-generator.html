@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR Generator - ToolNest</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f6f8fc;
+      color: #1e293b;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .box {
+      max-width: 500px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    }
+
+    input {
+      width: 90%;
+      padding: 12px;
+      margin: 15px 0;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 12px 25px;
+      background: #2563eb;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    #qrcode {
+      margin-top: 25px;
+      display: flex;
+      justify-content: center;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 20px;
+      color: #2563eb;
+      text-decoration: none;
+    }
+  </style>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+
+<body>
+
+  <div class="box">
+    <h1>📱 QR Generator</h1>
+
+    <p>Enter text or a website link:</p>
+
+    <input
+      type="text"
+      id="text"
+      placeholder="Example: Hello ToolNest"
+    >
+
+    <br>
+
+    <button onclick="generateQR()">Generate QR Code</button>
+
+    <div id="qrcode"></div>
+
+    <a href="index.html">← Back to ToolNest</a>
+  </div>
+
+  <script>
+    function generateQR() {
+      let text = document.getElementById("text").value;
+      let qr = document.getElementById("qrcode");
+
+      qr.innerHTML = "";
+
+      if (text.trim() === "") {
+        qr.innerText = "Please enter some text.";
+        return;
+      }
+
+      new QRCode(qr, {
+        text: text,
+        width: 200,
+        height: 200
+      });
+    }
+  </script>
+
+</body>
+</html>
