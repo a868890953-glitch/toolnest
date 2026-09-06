@@ -1,0 +1,1200 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ToolNest Blog - Calculator Guides, Student Tips & Useful Tools</title>
+
+  <meta name="description" content="Read detailed guides about BMI, percentage, CGPA, EMI, age calculation, discounts and other useful online tools on ToolNest.">
+
+  <meta name="keywords" content="BMI guide, percentage calculator guide, CGPA calculator, EMI calculator, age calculator, discount calculator, ToolNest blog">
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f6f8fc;
+      color: #172033;
+      line-height: 1.7;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* NAVBAR */
+
+    nav {
+      background: rgba(255,255,255,.95);
+      backdrop-filter: blur(15px);
+      border-bottom: 1px solid #e5e7eb;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 16px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: 800;
+      color: #2563eb;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-weight: 600;
+      color: #475569;
+      transition: .25s;
+    }
+
+    .nav-links a:hover {
+      color: #2563eb;
+    }
+
+
+    /* HERO */
+
+    .hero {
+      min-height: 520px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 20px;
+
+      background:
+      radial-gradient(circle at top left, #dbeafe, transparent 40%),
+      radial-gradient(circle at bottom right, #e0e7ff, transparent 40%),
+      linear-gradient(135deg,#f8fbff,#ffffff);
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #2563eb;
+      padding: 8px 18px;
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 {
+      font-size: 58px;
+      line-height: 1.1;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 span {
+      color: #2563eb;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: auto;
+      font-size: 19px;
+      color: #64748b;
+    }
+
+    .hero-buttons {
+      margin-top: 32px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 14px 24px;
+      border-radius: 12px;
+      font-weight: 700;
+      transition: .25s;
+    }
+
+    .btn-primary {
+      background: #2563eb;
+      color: white;
+      box-shadow: 0 10px 25px rgba(37,99,235,.25);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+    }
+
+    .btn-secondary {
+      background: white;
+      border: 1px solid #dbeafe;
+      color: #2563eb;
+    }
+
+
+    /* SEARCH */
+
+    .search-section {
+      max-width: 850px;
+      margin: -35px auto 0;
+      padding: 0 20px;
+      position: relative;
+      z-index: 10;
+    }
+
+    .search-box {
+      background: white;
+      padding: 12px;
+      border-radius: 18px;
+      box-shadow: 0 15px 40px rgba(0,0,0,.08);
+      display: flex;
+    }
+
+    .search-box input {
+      width: 100%;
+      border: none;
+      outline: none;
+      padding: 14px;
+      font-size: 16px;
+    }
+
+
+    /* GENERAL */
+
+    .section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 85px 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h2 {
+      font-size: 40px;
+      margin-bottom: 12px;
+    }
+
+    .section-title p {
+      color: #64748b;
+      max-width: 650px;
+      margin: auto;
+    }
+
+
+    /* BLOG GRID */
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 24px;
+    }
+
+    .blog-card {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 20px;
+      padding: 28px;
+      transition: .3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .blog-card::before {
+      content: "";
+      position: absolute;
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      background: #eff6ff;
+      top: -45px;
+      right: -45px;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 45px rgba(37,99,235,.12);
+      border-color: #bfdbfe;
+    }
+
+    .blog-icon {
+      font-size: 42px;
+      margin-bottom: 18px;
+      position: relative;
+    }
+
+    .category {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      color: #2563eb;
+      background: #eff6ff;
+      padding: 6px 12px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+    }
+
+    .blog-card h3 {
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+
+    .blog-card p {
+      color: #64748b;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .read-more {
+      color: #2563eb;
+      font-weight: 700;
+    }
+
+
+    /* FEATURED */
+
+    .featured {
+      background: #111827;
+      color: white;
+    }
+
+    .featured-container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 80px 20px;
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .featured-graphic {
+      height: 320px;
+      border-radius: 25px;
+
+      background:
+      radial-gradient(circle at 30% 30%, #60a5fa, transparent 30%),
+      radial-gradient(circle at 70% 70%, #6366f1, transparent 30%),
+      linear-gradient(135deg,#1e3a8a,#312e81);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-size: 120px;
+
+      box-shadow: 0 25px 60px rgba(0,0,0,.3);
+    }
+
+    .featured-text span {
+      color: #93c5fd;
+      font-weight: 700;
+    }
+
+    .featured-text h2 {
+      font-size: 42px;
+      margin: 15px 0;
+      line-height: 1.2;
+    }
+
+    .featured-text p {
+      color: #cbd5e1;
+      margin-bottom: 25px;
+    }
+
+
+    /* ARTICLES */
+
+    .article {
+      background: white;
+      max-width: 950px;
+      margin: 50px auto;
+      padding: 55px;
+      border-radius: 25px;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 10px 35px rgba(0,0,0,.04);
+    }
+
+    .article-icon {
+      font-size: 50px;
+      margin-bottom: 15px;
+    }
+
+    .article h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .article h3 {
+      margin-top: 30px;
+      margin-bottom: 12px;
+      color: #1d4ed8;
+      font-size: 23px;
+    }
+
+    .article p {
+      color: #475569;
+      margin-bottom: 16px;
+    }
+
+    .formula-box {
+      background: #eff6ff;
+      border-left: 5px solid #2563eb;
+      padding: 20px;
+      border-radius: 10px;
+      margin: 22px 0;
+      font-weight: 700;
+      color: #1e3a8a;
+    }
+
+    .tip-box {
+      background: #f0fdf4;
+      border-left: 5px solid #22c55e;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+      margin-top: 80px;
+      background: #111827;
+      color: #cbd5e1;
+      padding: 60px 20px 25px;
+    }
+
+    .footer-container {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 40px;
+    }
+
+    footer h3 {
+      color: white;
+      margin-bottom: 15px;
+    }
+
+    footer a {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    footer a:hover {
+      color: white;
+    }
+
+    .copyright {
+      max-width: 1100px;
+      margin: 40px auto 0;
+      border-top: 1px solid #334155;
+      padding-top: 20px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+
+    /* MOBILE */
+
+    @media(max-width:900px) {
+
+      .blog-grid {
+        grid-template-columns: repeat(2,1fr);
+      }
+
+      .featured-container {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 45px;
+      }
+
+    }
+
+    @media(max-width:600px) {
+
+      .nav-links {
+        gap: 12px;
+        font-size: 13px;
+      }
+
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      .blog-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .article {
+        padding: 28px;
+        margin: 25px 15px;
+      }
+
+      .article h2 {
+        font-size: 28px;
+      }
+
+      .section-title h2 {
+        font-size: 30px;
+      }
+
+      .footer-container {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+  <div class="nav-container">
+
+```
+<a href="index.html" class="logo">ToolNest</a>
+
+<div class="nav-links">
+  <a href="index.html">Home</a>
+  <a href="#guides">Guides</a>
+  <a href="#articles">Articles</a>
+</div>
+```
+
+  </div>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <div class="hero-content">
+
+```
+<div class="badge">✨ LEARN • CALCULATE • GROW</div>
+
+<h1>
+  Explore Smart Guides for
+  <span>Everyday Tools</span>
+</h1>
+
+<p>
+  Detailed explanations, simple formulas and practical guides
+  designed to help students and everyday users understand
+  calculations and digital tools with confidence.
+</p>
+
+<div class="hero-buttons">
+
+  <a href="#guides" class="btn btn-primary">
+    Explore Guides →
+  </a>
+
+  <a href="index.html" class="btn btn-secondary">
+    Explore Tools
+  </a>
+
+</div>
+```
+
+  </div>
+
+</section>
+
+<!-- SEARCH -->
+
+<section class="search-section">
+
+  <div class="search-box">
+
+```
+<input
+  type="text"
+  id="searchInput"
+  placeholder="Search BMI, Percentage, CGPA, EMI..."
+  onkeyup="searchBlogs()"
+>
+```
+
+  </div>
+
+</section>
+
+<!-- BLOG CARDS -->
+
+<section class="section" id="guides">
+
+  <div class="section-title">
+
+```
+<h2>Explore Our Guides</h2>
+
+<p>
+  Learn how popular calculators work and understand
+  the formulas behind everyday calculations.
+</p>
+```
+
+  </div>
+
+  <div class="blog-grid">
+
+```
+<a href="#bmi" class="blog-card searchable">
+
+  <div class="blog-icon">⚖️</div>
+
+  <div class="category">HEALTH TOOL</div>
+
+  <h3>BMI Calculator Guide</h3>
+
+  <p>
+    Understand BMI, its formula and how height and weight
+    are used in the calculation.
+  </p>
+
+  <span class="read-more">Read Guide →</span>
+
+</a>
+
+
+<a href="#percentage" class="blog-card searchable">
+
+  <div class="blog-icon">📊</div>
+
+  <div class="category">STUDENT GUIDE</div>
+
+  <h3>Percentage Calculation</h3>
+
+  <p>
+    Learn the percentage formula with simple examples
+    useful for students and everyday calculations.
+  </p>
+
+  <span class="read-more">Read Guide →</span>
+
+</a>
+
+
+<a href="#cgpa" class="blog-card searchable">
+
+  <div class="blog-icon">🎓</div>
+
+  <div class="category">EDUCATION</div>
+
+  <h3>CGPA Calculator Guide</h3>
+
+  <p>
+    Understand grade points, averages and how CGPA
+    calculations generally work.
+  </p>
+
+  <span class="read-more">Read Guide →</span>
+
+</a>
+
+
+<a href="#emi" class="blog-card searchable">
+
+  <div class="blog-icon">💰</div>
+
+  <div class="category">FINANCE</div>
+
+  <h3>EMI Calculator Guide</h3>
+
+  <p>
+    Learn how monthly loan instalments are estimated
+    using principal, interest and time.
+  </p>
+
+  <span class="read-more">Read Guide →</span>
+
+</a>
+
+
+<a href="#age" class="blog-card searchable">
+
+  <div class="blog-icon">🎂</div>
+
+  <div class="category">EVERYDAY TOOL</div>
+
+  <h3>Age Calculator Guide</h3>
+
+  <p>
+    Understand how age differences are calculated
+    using years, months and days.
+  </p>
+
+  <span class="read-more">Read Guide →</span>
+
+</a>
+
+
+<a href="#discount" class="blog-card searchable">
+
+  <div class="blog-icon">🏷️</div>
+
+  <div class="category">SHOPPING</div>
+
+  <h3>Discount Calculator Guide</h3>
+
+  <p>
+    Learn how to calculate discounts, savings and
+    final prices easily.
+  </p>
+
+  <span class="read-more">Read Guide →</span>
+
+</a>
+
+
+<a href="#date" class="blog-card searchable">
+
+  <div class="blog-icon">📅</div>
+
+  <div class="category">PRODUCTIVITY</div>
+
+  <h3>Date Calculator Guide</h3>
+
+  <p>
+    Learn how to calculate the difference between
+    two dates.
+  </p>
+
+  <span class="read-more">Read Guide →</span>
+
+</a>
+
+
+<a href="#character" class="blog-card searchable">
+
+  <div class="blog-icon">🔤</div>
+
+  <div class="category">WRITING</div>
+
+  <h3>Character Counter Guide</h3>
+
+  <p>
+    Understand characters, words, sentences and
+    why text counting tools are useful.
+  </p>
+
+  <span class="read-more">Read Guide →</span>
+
+</a>
+
+
+<a href="#case" class="blog-card searchable">
+
+  <div class="blog-icon">🔠</div>
+
+  <div class="category">TEXT TOOL</div>
+
+  <h3>Case Converter Guide</h3>
+
+  <p>
+    Learn about uppercase, lowercase, title case
+    and sentence case.
+  </p>
+
+  <span class="read-more">Read Guide →</span>
+
+</a>
+```
+
+  </div>
+
+</section>
+
+<!-- FEATURED -->
+
+<section class="featured">
+
+  <div class="featured-container">
+
+```
+<div class="featured-graphic">
+  🧠
+</div>
+
+<div class="featured-text">
+
+  <span>FEATURED LEARNING</span>
+
+  <h2>
+    Understanding the Formula
+    Behind Every Result
+  </h2>
+
+  <p>
+    Online calculators can save time, but understanding
+    the basic idea behind a calculation helps you use
+    results more confidently.
+  </p>
+
+  <a href="#articles" class="btn btn-primary">
+    Read Articles →
+  </a>
+
+</div>
+```
+
+  </div>
+
+</section>
+
+<!-- ARTICLES -->
+
+<section class="section" id="articles">
+
+  <div class="section-title">
+
+```
+<h2>Detailed Learning Articles</h2>
+
+<p>
+  Simple explanations of useful calculations and tools.
+</p>
+```
+
+  </div>
+
+  <!-- BMI -->
+
+  <article class="article" id="bmi">
+
+```
+<div class="article-icon">⚖️</div>
+
+<h2>What is BMI? A Simple Guide to Body Mass Index</h2>
+
+<p>
+  BMI stands for Body Mass Index. It is a mathematical value
+  calculated using a person's weight and height. BMI is commonly
+  used as a general screening measure to understand the relationship
+  between body weight and height.
+</p>
+
+<h3>How is BMI Calculated?</h3>
+
+<div class="formula-box">
+  BMI = Weight (kg) ÷ Height² (m)
+</div>
+
+<p>
+  For example, if a person's weight is 60 kg and height is
+  1.70 metres, the BMI calculation divides the weight by the
+  square of the height.
+</p>
+
+<h3>Why Use a BMI Calculator?</h3>
+
+<p>
+  A calculator makes the mathematical process faster because users
+  do not need to manually convert centimetres into metres and square
+  the height. However, BMI is a screening measurement and should
+  not be treated as a complete description of an individual's health.
+</p>
+
+<div class="tip-box">
+  💡 Tip: For teenagers and children, BMI interpretation differs
+  from adult categories and should consider age-specific growth information.
+</div>
+```
+
+  </article>
+
+  <!-- PERCENTAGE -->
+
+  <article class="article" id="percentage">
+
+```
+<div class="article-icon">📊</div>
+
+<h2>How to Calculate Percentage Easily</h2>
+
+<p>
+  Percentage is one of the most commonly used mathematical concepts.
+  Students use it for marks, businesses use it for discounts and
+  everyday users use percentages to compare values.
+</p>
+
+<h3>The Basic Formula</h3>
+
+<div class="formula-box">
+  Percentage = (Obtained Value ÷ Total Value) × 100
+</div>
+
+<p>
+  Suppose a student scores 425 marks out of 500.
+  Divide 425 by 500 and multiply the result by 100.
+  The answer is 85 percent.
+</p>
+
+<h3>Where are Percentages Used?</h3>
+
+<p>
+  Percentages are used in examination results, discounts,
+  financial calculations, statistics, surveys and many
+  other everyday situations.
+</p>
+```
+
+  </article>
+
+  <!-- CGPA -->
+
+  <article class="article" id="cgpa">
+
+```
+<div class="article-icon">🎓</div>
+
+<h2>Understanding CGPA and Grade Point Calculations</h2>
+
+<p>
+  CGPA generally represents the average grade-point performance
+  across multiple subjects. Different institutions may use different
+  grading systems, so students should always check their official
+  academic rules.
+</p>
+
+<h3>Basic CGPA Calculation</h3>
+
+<div class="formula-box">
+  CGPA = Sum of Grade Points ÷ Number of Subjects
+</div>
+
+<p>
+  If the grade points are 8, 9, 7 and 10, the calculator adds
+  all values and divides the total by the number of subjects.
+</p>
+
+<h3>Why is CGPA Useful?</h3>
+
+<p>
+  CGPA provides a general summary of academic performance.
+  Students can use it for planning and understanding their
+  average grade-point results.
+</p>
+```
+
+  </article>
+
+  <!-- EMI -->
+
+  <article class="article" id="emi">
+
+```
+<div class="article-icon">💰</div>
+
+<h2>What is EMI? Understanding Monthly Loan Payments</h2>
+
+<p>
+  EMI stands for Equated Monthly Instalment. It is the estimated
+  amount paid each month to repay a loan over a selected period.
+</p>
+
+<h3>Main Factors in EMI Calculation</h3>
+
+<p>
+  An EMI calculation usually depends on the loan amount,
+  interest rate and repayment period. Changing any of these
+  values can change the estimated monthly payment.
+</p>
+
+<div class="formula-box">
+  EMI = P × r × (1+r)ⁿ ÷ ((1+r)ⁿ − 1)
+</div>
+
+<p>
+  In the formula, P represents the principal amount,
+  r represents the monthly interest rate and n represents
+  the total number of monthly payments.
+</p>
+
+<div class="tip-box">
+  💡 Tip: Calculator results are estimates. Actual loan payments
+  may depend on lender terms, fees and interest-rate conditions.
+</div>
+```
+
+  </article>
+
+  <!-- AGE -->
+
+  <article class="article" id="age">
+
+```
+<div class="article-icon">🎂</div>
+
+<h2>How Does an Age Calculator Work?</h2>
+
+<p>
+  An age calculator compares a date of birth with another
+  selected date and calculates the difference between them.
+</p>
+
+<h3>More Than Simple Year Subtraction</h3>
+
+<p>
+  A precise age calculation considers years, months and days.
+  For example, simply subtracting birth year from the current
+  year may not be enough if the birthday has not yet occurred.
+</p>
+
+<h3>Useful Applications</h3>
+
+<p>
+  Age calculators can be useful for forms, eligibility checks,
+  planning birthdays and understanding date differences.
+</p>
+```
+
+  </article>
+
+  <!-- DISCOUNT -->
+
+  <article class="article" id="discount">
+
+```
+<div class="article-icon">🏷️</div>
+
+<h2>How to Calculate a Discount</h2>
+
+<p>
+  Discounts are usually expressed as a percentage of the original
+  price. Calculating the discount amount helps determine how much
+  money is saved.
+</p>
+
+<div class="formula-box">
+  Discount Amount = Original Price × Discount Percentage ÷ 100
+</div>
+
+<p>
+  After calculating the discount amount, subtract it from the
+  original price to find the final price.
+</p>
+
+<div class="formula-box">
+  Final Price = Original Price − Discount Amount
+</div>
+```
+
+  </article>
+
+  <!-- DATE -->
+
+  <article class="article" id="date">
+
+```
+<div class="article-icon">📅</div>
+
+<h2>Understanding Date Difference Calculations</h2>
+
+<p>
+  Date calculators help determine the number of days between
+  two calendar dates. This can be useful for planning deadlines,
+  projects, events and study schedules.
+</p>
+
+<h3>Why Date Calculations Can Be Difficult</h3>
+
+<p>
+  Months have different numbers of days and leap years add
+  additional complexity. A calculator can process these date
+  differences automatically.
+</p>
+```
+
+  </article>
+
+  <!-- CHARACTER -->
+
+  <article class="article" id="character">
+
+```
+<div class="article-icon">🔤</div>
+
+<h2>Why Use a Character Counter?</h2>
+
+<p>
+  Character counters help writers understand the length of
+  their text. They can count characters, words, sentences
+  and lines.
+</p>
+
+<h3>Useful for Students and Writers</h3>
+
+<p>
+  Many assignments, applications and online forms have
+  word or character limits. A counter helps users quickly
+  check whether their writing fits those requirements.
+</p>
+```
+
+  </article>
+
+  <!-- CASE -->
+
+  <article class="article" id="case">
+
+```
+<div class="article-icon">🔠</div>
+
+<h2>Understanding Text Case Conversion</h2>
+
+<p>
+  Text formatting can change how written content looks.
+  Case converters help transform text without manually
+  retyping every letter.
+</p>
+
+<h3>Common Text Cases</h3>
+
+<p>
+  Uppercase uses capital letters. Lowercase uses small letters.
+  Title case capitalizes major words, while sentence case follows
+  standard sentence capitalization.
+</p>
+
+<p>
+  A case converter is useful when editing copied text,
+  preparing notes or formatting written content quickly.
+</p>
+```
+
+  </article>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="footer-container">
+
+```
+<div>
+
+  <h3>ToolNest Blog</h3>
+
+  <p>
+    Simple guides, useful explanations and learning resources
+    for everyday calculators and digital tools.
+  </p>
+
+</div>
+
+
+<div>
+
+  <h3>Explore</h3>
+
+  <a href="#guides">Guides</a>
+  <a href="#articles">Articles</a>
+  <a href="index.html">Tools</a>
+
+</div>
+
+
+<div>
+
+  <h3>Popular Guides</h3>
+
+  <a href="#bmi">BMI Guide</a>
+  <a href="#percentage">Percentage Guide</a>
+  <a href="#cgpa">CGPA Guide</a>
+  <a href="#emi">EMI Guide</a>
+
+</div>
+```
+
+  </div>
+
+  <div class="copyright">
+
+```
+© 2026 ToolNest. All rights reserved.
+```
+
+  </div>
+
+</footer>
+
+<!-- SEARCH JAVASCRIPT -->
+
+<script>
+
+function searchBlogs() {
+
+  const input =
+    document.getElementById("searchInput")
+    .value
+    .toLowerCase();
+
+  const cards =
+    document.querySelectorAll(".searchable");
+
+  cards.forEach(card => {
+
+    const text =
+      card.innerText.toLowerCase();
+
+    if (text.includes(input)) {
+
+      card.style.display = "block";
+
+    } else {
+
+      card.style.display = "none";
+
+    }
+
+  });
+
+}
+
+</script>
+
+</body>
+</html>
