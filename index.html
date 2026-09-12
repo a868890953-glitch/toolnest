@@ -1,2333 +1,1749 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ToolNest - Free Online Calculators, Student Tools & Maths Quiz</title>
 
-  <title>ToolNest - Free Online Calculators, Student Tools & Productivity Tools</title>
+<meta name="description" content="ToolNest provides free online calculators, student tools, banking calculators, maths formulas, Class 9 Maths quiz, QR code generator and productivity tools.">
 
-  <meta name="description" content="ToolNest offers free online calculators including Age Calculator, EMI Calculator, BMI Calculator, CGPA Calculator, Percentage Calculator, Discount Calculator, Date Calculator, Character Counter and Case Converter. Fast, accurate and easy to use.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#07111f">
 
-  <meta name="keywords" content="free online calculators, age calculator, EMI calculator, BMI calculator, CGPA calculator, marks percentage calculator, percentage calculator, discount calculator, date calculator, character counter, case converter, student tools, productivity tools, ToolNest">
+<link rel="canonical" href="https://a868890953-glitch.github.io/toolnest/">
 
-  <meta name="author" content="ToolNest">
+<meta property="og:title" content="ToolNest - Free Online Tools">
+<meta property="og:description" content="Free calculators, student tools, maths formulas, quizzes and productivity tools.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://a868890953-glitch.github.io/toolnest/">
 
-  <meta name="robots" content="index, follow">
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
 
-  <meta name="googlebot" content="index, follow">
-<meta name="language" content="English">
-<meta name="revisit-after" content="7 days">                                                                                                               
-  <meta name="theme-color" content="#2563eb">
+html{
+  scroll-behavior:smooth;
+}
 
-  <link rel="canonical" href="https://a868890953-glitch.github.io/toolnest/">
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:#05080d;
+  color:#eaf2ff;
+  line-height:1.6;
+}
 
-  <meta name="google-site-verification" content="YOUR_GOOGLE_VERIFICATION_CODE">
+a{
+  color:inherit;
+  text-decoration:none;
+}
 
-  <!-- Open Graph SEO -->
-  <meta property="og:title" content="ToolNest - Free Online Calculators & Tools">
-  <meta property="og:description" content="Use free, fast and easy online calculators for age, EMI, BMI, CGPA, percentage, discounts, dates and more.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://a868890953-glitch.github.io/toolnest/">
+.container{
+  width:min(1150px,92%);
+  margin:auto;
+}
 
-  <!-- Twitter SEO -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="ToolNest - Free Online Calculators & Tools">
-  <meta name="twitter:description" content="Free online calculators and productivity tools for students and everyday users.">
+/* NAVBAR */
+nav{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(5,8,13,.96);
+  border-bottom:1px solid #12345c;
+  backdrop-filter:blur(10px);
+}
 
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"WebSite",
-    "name":"ToolNest",
-    "url":"https://a868890953-glitch.github.io/toolnest/",
-    "description":"Free online calculators, student tools and productivity tools."
+.nav-inner{
+  min-height:70px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.logo{
+  font-size:25px;
+  font-weight:800;
+  color:#38a9ff;
+}
+
+.logo span{
+  color:#fff;
+}
+
+.nav-links{
+  display:flex;
+  gap:22px;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+.nav-links a{
+  color:#cbd8e8;
+  font-size:14px;
+}
+
+.nav-links a:hover{
+  color:#42b3ff;
+}
+
+/* HERO */
+.hero{
+  padding:85px 0 70px;
+  background:
+    radial-gradient(circle at top right,#07356b55,transparent 40%),
+    radial-gradient(circle at bottom left,#005eff22,transparent 35%),
+    #05080d;
+}
+
+.badge{
+  display:inline-block;
+  padding:8px 14px;
+  border:1px solid #1c69a8;
+  border-radius:30px;
+  color:#55b9ff;
+  background:#081522;
+  font-size:13px;
+  margin-bottom:20px;
+}
+
+.hero h1{
+  font-size:clamp(38px,6vw,68px);
+  line-height:1.05;
+  max-width:850px;
+  margin-bottom:20px;
+}
+
+.hero h1 span{
+  color:#35aaff;
+}
+
+.hero p{
+  color:#aebdd0;
+  max-width:720px;
+  font-size:18px;
+}
+
+.hero-buttons{
+  display:flex;
+  gap:12px;
+  margin-top:30px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  display:inline-block;
+  padding:13px 21px;
+  border-radius:9px;
+  font-weight:700;
+  border:1px solid #1769aa;
+  background:#087bd1;
+  color:white;
+}
+
+.btn.secondary{
+  background:#0a111b;
+  border-color:#244564;
+}
+
+.btn:hover{
+  transform:translateY(-1px);
+}
+
+/* TRUST */
+.trust{
+  border-top:1px solid #10263e;
+  border-bottom:1px solid #10263e;
+  background:#08101a;
+}
+
+.trust-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+}
+
+.trust-item{
+  text-align:center;
+  padding:22px 10px;
+  border-right:1px solid #10263e;
+}
+
+.trust-item:last-child{
+  border-right:0;
+}
+
+.trust-item strong{
+  display:block;
+  color:#45b2ff;
+}
+
+/* SECTIONS */
+section{
+  padding:70px 0;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:38px;
+}
+
+.section-title h2{
+  font-size:35px;
+  margin-bottom:8px;
+}
+
+.section-title p{
+  color:#94a8bd;
+}
+
+/* CATEGORIES */
+.category-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.category{
+  background:#0a111a;
+  border:1px solid #17324e;
+  border-radius:15px;
+  padding:25px;
+}
+
+.category h3{
+  color:#42b3ff;
+  margin-bottom:8px;
+}
+
+.category p{
+  color:#a5b5c7;
+}
+
+/* TOOL SEARCH */
+.search-box{
+  max-width:650px;
+  margin:0 auto 30px;
+}
+
+.search-box input{
+  width:100%;
+  padding:16px;
+  border-radius:10px;
+  border:1px solid #21476b;
+  background:#080e16;
+  color:#fff;
+  outline:none;
+  font-size:16px;
+}
+
+.search-box input:focus{
+  border-color:#1597ed;
+}
+
+/* TOOLS */
+.tools-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.tool-card{
+  background:#0a111a;
+  border:1px solid #17324e;
+  border-radius:15px;
+  padding:23px;
+  transition:.2s;
+}
+
+.tool-card:hover{
+  border-color:#168fe0;
+  transform:translateY(-3px);
+}
+
+.tool-card h3{
+  color:#48b4ff;
+  margin-bottom:8px;
+}
+
+.tool-card p{
+  color:#9eafc1;
+  font-size:14px;
+}
+
+/* CALCULATORS */
+.calculator{
+  max-width:850px;
+  margin:25px auto;
+  background:#0a111a;
+  border:1px solid #17324e;
+  border-radius:16px;
+  padding:28px;
+}
+
+.calculator h3{
+  color:#42b3ff;
+  margin-bottom:15px;
+}
+
+.input-group{
+  margin-bottom:14px;
+}
+
+.input-group label{
+  display:block;
+  margin-bottom:6px;
+  color:#c9d7e7;
+  font-size:14px;
+}
+
+.input-group input,
+.input-group textarea,
+.input-group select{
+  width:100%;
+  padding:12px;
+  border-radius:8px;
+  border:1px solid #244665;
+  background:#050a10;
+  color:#fff;
+  outline:none;
+}
+
+.input-group input:focus,
+.input-group textarea:focus,
+.input-group select:focus{
+  border-color:#1599ed;
+}
+
+.calc-btn{
+  padding:11px 18px;
+  border:0;
+  border-radius:8px;
+  background:#087bd1;
+  color:#fff;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.calc-btn.reset{
+  background:#26384b;
+  margin-left:7px;
+}
+
+.result{
+  margin-top:16px;
+  padding:15px;
+  background:#071a2b;
+  border:1px solid #145c91;
+  border-radius:9px;
+  color:#dff2ff;
+  min-height:45px;
+}
+
+/* MATH FORMULAS */
+.formula-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.formula-card{
+  background:#0a111a;
+  border:1px solid #17324e;
+  border-radius:14px;
+  padding:22px;
+}
+
+.formula-card h3{
+  color:#42b3ff;
+  margin-bottom:12px;
+}
+
+.formula{
+  background:#050a10;
+  border-left:3px solid #1599ed;
+  padding:12px;
+  margin:8px 0;
+  color:#e5f4ff;
+  font-weight:bold;
+}
+
+/* QUIZ */
+.quiz-box{
+  max-width:900px;
+  margin:auto;
+  background:#0a111a;
+  border:1px solid #17324e;
+  border-radius:16px;
+  padding:28px;
+}
+
+.question{
+  padding:20px;
+  margin-bottom:18px;
+  border:1px solid #17324e;
+  border-radius:12px;
+  background:#080e16;
+}
+
+.question h3{
+  font-size:17px;
+  margin-bottom:12px;
+}
+
+.option{
+  display:block;
+  padding:9px;
+  margin:5px 0;
+  border-radius:7px;
+  cursor:pointer;
+  color:#c7d5e5;
+}
+
+.option:hover{
+  background:#0e1d2c;
+}
+
+.quiz-result{
+  margin-top:20px;
+  padding:20px;
+  border-radius:12px;
+  background:#071a2b;
+  border:1px solid #176a9e;
+  text-align:center;
+  font-size:18px;
+}
+
+.score-number{
+  font-size:30px;
+  color:#42b3ff;
+  font-weight:bold;
+}
+
+/* FAQ */
+.faq{
+  max-width:850px;
+  margin:auto;
+}
+
+details{
+  background:#0a111a;
+  border:1px solid #17324e;
+  border-radius:10px;
+  padding:16px 18px;
+  margin-bottom:10px;
+}
+
+summary{
+  cursor:pointer;
+  font-weight:bold;
+  color:#dcecff;
+}
+
+details p{
+  color:#9eafc1;
+  margin-top:10px;
+}
+
+/* ABOUT */
+.about{
+  max-width:850px;
+  margin:auto;
+  color:#a8b8c9;
+}
+
+.about p{
+  margin-bottom:15px;
+}
+
+/* FOOTER */
+footer{
+  background:#03060a;
+  border-top:1px solid #12304d;
+  padding:35px 0;
+  color:#899bad;
+}
+
+.footer-inner{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.footer-logo{
+  color:#42b3ff;
+  font-size:22px;
+  font-weight:bold;
+}
+
+/* RESPONSIVE */
+@media(max-width:850px){
+  .tools-grid,
+  .formula-grid{
+    grid-template-columns:repeat(2,1fr);
   }
-  </script>
 
-  <style>
+  .category-grid{
+    grid-template-columns:1fr;
+  }
+
+  .trust-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .trust-item{
+    border-bottom:1px solid #10263e;
+  }
+}
+
+@media(max-width:600px){
+  .nav-inner{
+    flex-direction:column;
+    padding:15px 0;
+  }
+
+  .nav-links{
+    justify-content:center;
+    gap:12px;
+  }
+
+  .hero{
+    padding-top:55px;
+  }
+
+  .tools-grid,
+  .formula-grid{
+    grid-template-columns:1fr;
+  }
+
+  .trust-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  section{
+    padding:50px 0;
+  }
+}
+</style>
+
+<!-- QR Code Library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"ToolNest",
+  "url":"https://a868890953-glitch.github.io/toolnest/",
+  "description":"Free online calculators, student tools, maths formulas and productivity tools."
+}
+</script>
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f5f7fb;
-      color: #172033;
-      line-height: 1.6;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    button,
-    input,
-    select,
-    textarea {
-      font-family: inherit;
-    }
-
-    /* NAVBAR */
-
-    nav {
-      background: #ffffff;
-      border-bottom: 1px solid #e5e7eb;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    .nav-container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 16px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .logo {
-      font-size: 25px;
-      font-weight: 800;
-      color: #2563eb;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 25px;
-      align-items: center;
-    }
-
-    .nav-links a {
-      font-weight: 600;
-      color: #374151;
-    }
-
-    .nav-links a:hover {
-      color: #2563eb;
-    }
-
-    /* HERO */
-
-    .hero {
-      padding: 80px 20px;
-      text-align: center;
-      background: linear-gradient(135deg, #eff6ff, #ffffff);
-    }
-
-    .hero h1 {
-      font-size: 48px;
-      max-width: 850px;
-      margin: auto;
-      line-height: 1.15;
-    }
-
-    .hero h1 span {
-      color: #2563eb;
-    }
-
-    .hero p {
-      max-width: 720px;
-      margin: 22px auto;
-      color: #64748b;
-      font-size: 18px;
-    }
-
-    .hero-buttons {
-      margin-top: 30px;
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      border: none;
-      padding: 13px 22px;
-      border-radius: 10px;
-      font-weight: 700;
-      cursor: pointer;
-      transition: .2s;
-    }
-
-    .btn-primary {
-      background: #2563eb;
-      color: white;
-    }
-
-    .btn-primary:hover {
-      background: #1d4ed8;
-      transform: translateY(-2px);
-    }
-
-    .btn-secondary {
-      background: white;
-      color: #2563eb;
-      border: 1px solid #bfdbfe;
-    }
-
-    /* TRUST */
-
-    .trust {
-      background: white;
-      border-bottom: 1px solid #e5e7eb;
-    }
-
-    .trust-container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 20px;
-      display: grid;
-      grid-template-columns: repeat(3,1fr);
-      text-align: center;
-      gap: 15px;
-    }
-
-    .trust-item strong {
-      display: block;
-      color: #111827;
-    }
-
-    .trust-item span {
-      color: #6b7280;
-      font-size: 14px;
-    }
-
-    /* GENERAL */
-
-    .section {
-      max-width: 1200px;
-      margin: auto;
-      padding: 70px 20px;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 45px;
-    }
-
-    .section-title h2 {
-      font-size: 36px;
-      margin-bottom: 10px;
-    }
-
-    .section-title p {
-      color: #64748b;
-    }
-
-    /* TOOL GRID */
-
-    .tools-grid {
-      display: grid;
-      grid-template-columns: repeat(3,1fr);
-      gap: 22px;
-    }
-
-    .tool-card {
-      background: white;
-      padding: 28px;
-      border-radius: 16px;
-      border: 1px solid #e5e7eb;
-      transition: .25s;
-      box-shadow: 0 5px 20px rgba(0,0,0,.04);
-    }
-
-    .tool-card:hover {
-      transform: translateY(-5px);
-      border-color: #93c5fd;
-      box-shadow: 0 15px 35px rgba(37,99,235,.1);
-    }
-
-    .tool-icon {
-      font-size: 34px;
-      margin-bottom: 15px;
-    }
-
-    .tool-card h3 {
-      margin-bottom: 8px;
-      font-size: 21px;
-    }
-
-    .tool-card p {
-      color: #64748b;
-      font-size: 14px;
-      margin-bottom: 18px;
-    }
-
-    .tool-link {
-      color: #2563eb;
-      font-weight: 700;
-      cursor: pointer;
-    }
-
-    /* CALCULATOR */
-
-    .calculator-section {
-      max-width: 950px;
-      margin: 30px auto;
-      padding: 35px 20px;
-    }
-
-    .calculator-card {
-      background: white;
-      border-radius: 18px;
-      padding: 35px;
-      border: 1px solid #e5e7eb;
-      box-shadow: 0 12px 35px rgba(0,0,0,.06);
-    }
-
-    .calculator-card h2 {
-      font-size: 30px;
-      margin-bottom: 8px;
-    }
-
-    .calculator-card > p {
-      color: #64748b;
-      margin-bottom: 25px;
-    }
-
-    .calc-grid {
-      display: grid;
-      grid-template-columns: repeat(2,1fr);
-      gap: 18px;
-    }
-
-    .input-group {
-      margin-bottom: 15px;
-    }
-
-    .input-group label {
-      display: block;
-      margin-bottom: 7px;
-      font-weight: 700;
-    }
-
-    .input-group input,
-    .input-group select,
-    .input-group textarea {
-      width: 100%;
-      padding: 13px;
-      border: 1px solid #d1d5db;
-      border-radius: 9px;
-      outline: none;
-      background: white;
-    }
-
-    .input-group input:focus,
-    .input-group select:focus,
-    .input-group textarea:focus {
-      border-color: #2563eb;
-    }
-
-    .calc-buttons {
-      display: flex;
-      gap: 12px;
-      margin-top: 10px;
-      flex-wrap: wrap;
-    }
-
-    .result {
-      display: none;
-      margin-top: 25px;
-      padding: 22px;
-      border-radius: 12px;
-      background: #eff6ff;
-      border: 1px solid #bfdbfe;
-    }
-
-    .result.show {
-      display: block;
-    }
-
-    .result h3 {
-      color: #1d4ed8;
-      margin-bottom: 8px;
-    }
-
-    .big-result {
-      font-size: 34px;
-      font-weight: 800;
-      color: #2563eb;
-    }
-
-    .formula {
-      margin-top: 20px;
-      padding: 15px;
-      background: #f8fafc;
-      border-left: 4px solid #2563eb;
-      font-size: 14px;
-    }
-
-    /* BMI */
-
-    .bmi-result {
-      text-align: center;
-    }
-
-    .bmi-value {
-      font-size: 48px;
-      font-weight: 800;
-      color: #2563eb;
-    }
-
-    .bmi-category {
-      font-size: 20px;
-      font-weight: 700;
-      margin-top: 5px;
-    }
-
-    .bmi-scale {
-      margin: 25px 0 10px;
-      height: 18px;
-      border-radius: 20px;
-      background: linear-gradient(
-        to right,
-        #60a5fa 0%,
-        #60a5fa 18.5%,
-        #34d399 18.5%,
-        #34d399 25%,
-        #fbbf24 25%,
-        #fbbf24 30%,
-        #f87171 30%,
-        #f87171 100%
-      );
-      position: relative;
-    }
-
-    .bmi-marker {
-      position: absolute;
-      top: -7px;
-      width: 4px;
-      height: 32px;
-      background: #111827;
-      left: 0;
-      transition: .4s;
-    }
-
-    .note {
-      background: #fff7ed;
-      border: 1px solid #fed7aa;
-      padding: 15px;
-      border-radius: 10px;
-      margin-top: 18px;
-      color: #7c2d12;
-      font-size: 14px;
-    }
-
-    /* DESCRIPTION */
-
-    .description-box {
-      background: white;
-      border: 1px solid #e5e7eb;
-      padding: 30px;
-      border-radius: 16px;
-      margin-top: 25px;
-    }
-
-    .description-box h3 {
-      margin: 20px 0 8px;
-    }
-
-    .description-box h3:first-child {
-      margin-top: 0;
-    }
-
-    .description-box p {
-      color: #4b5563;
-      margin-bottom: 14px;
-    }
-
-    /* ABOUT */
-
-    .about {
-      background: white;
-      border-top: 1px solid #e5e7eb;
-    }
-
-    .about-content {
-      max-width: 950px;
-      margin: auto;
-    }
-
-    .about-content h2 {
-      font-size: 38px;
-      margin-bottom: 20px;
-    }
-
-    .about-content h3 {
-      margin-top: 28px;
-      margin-bottom: 10px;
-      color: #1d4ed8;
-    }
-
-    .about-content p {
-      color: #4b5563;
-      margin-bottom: 15px;
-    }
-
-    /* FOOTER */
-
-    footer {
-      background: #111827;
-      color: #d1d5db;
-      padding: 45px 20px 25px;
-    }
-
-    .footer-container {
-      max-width: 1200px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr;
-      gap: 40px;
-    }
-
-    footer h3 {
-      color: white;
-      margin-bottom: 15px;
-    }
-
-    footer a {
-      display: block;
-      margin-bottom: 8px;
-    }
-
-    footer a:hover {
-      color: white;
-    }
-
-    .copyright {
-      max-width: 1200px;
-      margin: 30px auto 0;
-      padding-top: 20px;
-      border-top: 1px solid #374151;
-      text-align: center;
-      font-size: 14px;
-    }
-
-    /* MOBILE */
-
-    @media(max-width:850px) {
-
-      .tools-grid {
-        grid-template-columns: repeat(2,1fr);
-      }
-
-      .footer-container {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .hero h1 {
-        font-size: 38px;
-      }
-    }
-
-    @media(max-width:600px) {
-
-      .nav-links {
-        gap: 10px;
-        font-size: 13px;
-      }
-
-      .tools-grid,
-      .calc-grid,
-      .trust-container,
-      .footer-container {
-        grid-template-columns: 1fr;
-      }
-
-      .hero {
-        padding: 55px 20px;
-      }
-
-      .hero h1 {
-        font-size: 34px;
-      }
-
-      .calculator-card {
-        padding: 22px;
-      }
-
-      .section-title h2 {
-        font-size: 29px;
-      }
-    }
-
-  </style>
 </head>
 
 <body>
 
 <!-- NAVBAR -->
-
 <nav>
-  <div class="nav-container">
+<div class="container nav-inner">
 
-    <a href="#" class="logo">ToolNest</a>
+<a href="#" class="logo">Tool<span>Nest</span></a>
 
-    <div class="nav-links">
-      <a href="#">Home</a>
-      <a href="#tools">Tools</a>                                                                                                                                      
-        <a href="#faq">FAQ</a>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
-  <a href="#about">About</a> 
-
-  <a href="blog.html">Blog</a>
+<div class="nav-links">
+<a href="#home">Home</a>
+<a href="#tools">Tools</a>
+<a href="#students">Students</a>
+<a href="#formulas">Math Formulas</a>
+<a href="#quiz">Quiz</a>
+<a href="#faq">FAQ</a>
+<a href="blog.html">Blog</a>
 </div>
- </div>
+
+</div>
 </nav>
+
 <!-- HERO -->
+<header class="hero" id="home">
+<div class="container">
 
-<section class="hero">
+<div class="badge">100% Free • Students • Banking • Everyday Use</div>
 
-  <h1>
-    Powerful <span>Free Online Tools</span>
-    for Everyday Tasks
-  </h1>
+<h1>
+Powerful Tools.<br>
+<span>Simple & Free.</span>
+</h1>
 
-  <p>
-    ToolNest brings useful calculators, student tools and productivity
-    utilities together in one simple, fast and professional platform.
-  </p>
+<p>
+ToolNest is a free collection of online calculators, student tools,
+banking calculators, maths formulas, quizzes and productivity tools.
+</p>
 
-  <div class="hero-buttons">
-    <a href="#tools" class="btn btn-primary">Explore Tools</a>
-    <a href="#about" class="btn btn-secondary">Learn More</a>
-  </div>
+<div class="hero-buttons">
+<a href="#tools" class="btn">Explore Tools</a>
+<a href="#quiz" class="btn secondary">Try Maths Quiz</a>
+</div>
 
-</section>
-
+</div>
+</header>
 
 <!-- TRUST -->
+<div class="trust">
+<div class="container trust-grid">
 
-<section class="trust">
+<div class="trust-item">
+<strong>Fast</strong>
+<span>Quick calculations</span>
+</div>
 
-  <div class="trust-container">
+<div class="trust-item">
+<strong>Student Friendly</strong>
+<span>Useful for study</span>
+</div>
 
-    <div class="trust-item">
-      <strong>⚡ Fast</strong>
-      <span>Instant calculations</span>
-    </div>
+<div class="trust-item">
+<strong>Finance Ready</strong>
+<span>Helpful calculators</span>
+</div>
 
-    <div class="trust-item">
-      <strong>🎯 Simple</strong>
-      <span>Easy-to-use interface</span>
-    </div>
+<div class="trust-item">
+<strong>Privacy Focused</strong>
+<span>Browser-based tools</span>
+</div>
 
-    <div class="trust-item">
-      <strong>📱 Responsive</strong>
-      <span>Works on mobile and desktop</span>
-    </div>
+</div>
+</div>
 
-  </div>
+<!-- CATEGORIES -->
+<section>
+<div class="container">
 
+<div class="section-title">
+<h2>Explore ToolNest</h2>
+<p>Tools organized for different everyday needs.</p>
+</div>
+
+<div class="category-grid">
+
+<div class="category">
+<h3>For Students</h3>
+<p>CGPA, percentage, age, character counter, maths formulas and quiz tools.</p>
+</div>
+
+<div class="category">
+<h3>Banking & Finance</h3>
+<p>EMI and discount calculations for educational and everyday planning.</p>
+</div>
+
+<div class="category">
+<h3>Everyday Tools</h3>
+<p>Date calculator, case converter, QR generator and other useful utilities.</p>
+</div>
+
+</div>
+</div>
 </section>
-
 
 <!-- TOOLS -->
-
-<section class="section" id="tools">
-
-  <div class="section-title">
-
-    <h2>Free Online Tools</h2>
-
-    <p>
-      Choose a tool and get your result instantly.
-    </p>
-
-  </div>
-
-
-  <div class="tools-grid">
-
-
-    <!-- AGE -->
-
-    <div class="tool-card">
-
-      <div class="tool-icon">🎂</div>
-
-      <h3>Age Calculator</h3>
-
-      <p>
-        Calculate your exact age in years, months and days using your date of birth.
-      </p>
-
-      <a class="tool-link" href="#age-calculator">
-        Open Calculator →
-      </a>
-
-    </div>
-
-
-    <!-- EMI -->
-
-    <div class="tool-card">
-
-      <div class="tool-icon">💰</div>
-
-      <h3>EMI Calculator</h3>
-
-      <p>
-        Calculate monthly loan EMI, total interest and total repayment amount.
-      </p>
-
-      <a class="tool-link" href="#emi-calculator">
-        Open Calculator →
-      </a>
-
-    </div>
-
-
-    <!-- BMI -->
-
-    <div class="tool-card">
-
-      <div class="tool-icon">⚖️</div>
-
-      <h3>BMI Calculator</h3>
-
-      <p>
-        Calculate Body Mass Index from height and weight with appropriate interpretation guidance.
-      </p>
-
-      <a class="tool-link" href="#bmi-calculator">
-        Open Calculator →
-      </a>
-
-    </div>
-
-
-    <!-- CGPA -->
-
-    <div class="tool-card">
-
-      <div class="tool-icon">🎓</div>
-
-      <h3>CGPA Calculator</h3>
-
-      <p>
-        Calculate average CGPA from multiple subject grades or grade points.
-      </p>
-
-      <a class="tool-link" href="#cgpa-calculator">
-        Open Calculator →
-      </a>
-
-    </div>
-
-
-    <!-- PERCENTAGE -->
-
-    <div class="tool-card">
-
-      <div class="tool-icon">📊</div>
-
-      <h3>Marks Percentage Calculator</h3>
-
-      <p>
-        Quickly calculate marks percentage from obtained marks and total marks.
-      </p>
-
-      <a class="tool-link" href="#percentage-calculator">
-        Open Calculator →
-      </a>
-
-    </div>
-
-
-    <!-- DISCOUNT -->
-
-    <div class="tool-card">
-
-      <div class="tool-icon">🏷️</div>
-
-      <h3>Discount Calculator</h3>
-
-      <p>
-        Find discount amount and final price after applying a percentage discount.
-      </p>
-
-      <a class="tool-link" href="#discount-calculator">
-        Open Calculator →
-      </a>
-
-    </div>
-
-
-    <!-- DATE -->
-
-    <div class="tool-card">
-
-      <div class="tool-icon">📅</div>
-
-      <h3>Date Calculator</h3>
-
-      <p>
-        Calculate the number of days between two dates quickly and accurately.
-      </p>
-
-      <a class="tool-link" href="#date-calculator">
-        Open Calculator →
-      </a>
-
-    </div>
-
-
-    <!-- CHARACTER -->
-
-    <div class="tool-card">
-
-      <div class="tool-icon">🔤</div>
-
-      <h3>Character Counter</h3>
-
-      <p>
-        Count characters, words, sentences and spaces in your text.
-      </p>
-
-      <a class="tool-link" href="#character-counter">
-        Open Tool →
-      </a>
-
-    </div>
-
-
-    <!-- CASE -->
-
-    <div class="tool-card">
-
-      <div class="tool-icon">🔠</div>
-
-      <h3>Case Converter</h3>
-
-      <p>
-        Convert text instantly into uppercase, lowercase, title case and sentence case.
-      </p>
-
-      <a class="tool-link" href="#case-converter">
-        Open Tool →
-      </a>
-
-    </div>
-
-
-  </div>
-
+<section id="tools">
+<div class="container">
+
+<div class="section-title">
+<h2>Free Online Tools</h2>
+<p>Choose a tool and calculate instantly.</p>
+</div>
+
+<div class="search-box">
+<input type="text" id="toolSearch" placeholder="Search tools..." onkeyup="searchTools()">
+</div>
+
+<div class="tools-grid" id="toolGrid">
+
+<div class="tool-card">
+<h3>Age Calculator</h3>
+<p>Calculate age from date of birth.</p>
+</div>
+
+<div class="tool-card">
+<h3>EMI Calculator</h3>
+<p>Calculate monthly loan EMI.</p>
+</div>
+
+<div class="tool-card">
+<h3>BMI Calculator</h3>
+<p>Calculate BMI. For people under 20, BMI should be interpreted using age- and sex-specific growth references.</p>
+</div>
+
+<div class="tool-card">
+<h3>CGPA Calculator</h3>
+<p>Calculate average CGPA from your grades.</p>
+</div>
+
+<div class="tool-card">
+<h3>Percentage Calculator</h3>
+<p>Calculate marks percentage quickly.</p>
+</div>
+
+<div class="tool-card">
+<h3>Discount Calculator</h3>
+<p>Calculate discount amount and final price.</p>
+</div>
+
+<div class="tool-card">
+<h3>Date Calculator</h3>
+<p>Find the number of days between dates.</p>
+</div>
+
+<div class="tool-card">
+<h3>Character Counter</h3>
+<p>Count characters, words, sentences and lines.</p>
+</div>
+
+<div class="tool-card">
+<h3>Case Converter</h3>
+<p>Convert text to uppercase, lowercase and other formats.</p>
+</div>
+
+<div class="tool-card">
+<h3>QR Code Generator</h3>
+<p>Create a QR code from text or a website address.</p>
+</div>
+
+</div>
+</div>
 </section>
 
+<!-- AGE -->
+<section>
+<div class="container">
+<div class="calculator">
 
-<!-- AGE CALCULATOR -->
+<h3>Age Calculator</h3>
 
-<section class="calculator-section" id="age-calculator">
+<div class="input-group">
+<label>Date of Birth</label>
+<input type="date" id="dob">
+</div>
 
-  <div class="calculator-card">
+<button class="calc-btn" onclick="calculateAge()">Calculate Age</button>
 
-    <h2>🎂 Age Calculator</h2>
+<div class="result" id="ageResult"></div>
 
-    <p>
-      Find your exact age based on your date of birth and today's date.
-    </p>
-
-    <div class="calc-grid">
-
-      <div class="input-group">
-
-        <label>Date of Birth</label>
-
-        <input type="date" id="dob">
-
-      </div>
-
-      <div class="input-group">
-
-        <label>Calculate Age On</label>
-
-        <input type="date" id="ageDate">
-
-      </div>
-
-    </div>
-
-    <div class="calc-buttons">
-
-      <button class="btn btn-primary" onclick="calculateAge()">
-        Calculate Age
-      </button>
-
-      <button class="btn btn-secondary" onclick="resetAge()">
-        Reset
-      </button>
-
-    </div>
-
-    <div class="result" id="ageResult"></div>
-
-    <div class="formula">
-      <strong>Formula:</strong>
-      Age is calculated by comparing the year, month and day of the birth date with the selected calculation date.
-    </div>
-
-  </div>
-
+</div>
+</div>
 </section>
 
+<!-- EMI -->
+<section>
+<div class="container">
+<div class="calculator">
 
-<!-- EMI CALCULATOR -->
+<h3>EMI Calculator</h3>
 
-<section class="calculator-section" id="emi-calculator">
+<div class="input-group">
+<label>Loan Amount</label>
+<input type="number" id="loanAmount" placeholder="Example: 500000">
+</div>
 
-  <div class="calculator-card">
+<div class="input-group">
+<label>Annual Interest Rate (%)</label>
+<input type="number" id="interestRate" step="0.01" placeholder="Example: 8.5">
+</div>
 
-    <h2>💰 EMI Calculator</h2>
+<div class="input-group">
+<label>Loan Tenure (Years)</label>
+<input type="number" id="loanYears" placeholder="Example: 5">
+</div>
 
-    <p>
-      Calculate your monthly Equated Monthly Instalment, total interest and total loan repayment.
-    </p>
+<button class="calc-btn" onclick="calculateEMI()">Calculate EMI</button>
 
-    <div class="calc-grid">
+<div class="result" id="emiResult"></div>
 
-      <div class="input-group">
-
-        <label>Loan Amount (₹)</label>
-
-        <input type="number" id="loanAmount" placeholder="Example: 500000">
-
-      </div>
-
-      <div class="input-group">
-
-        <label>Annual Interest Rate (%)</label>
-
-        <input type="number" id="interestRate" step="0.01" placeholder="Example: 8.5">
-
-      </div>
-
-      <div class="input-group">
-
-        <label>Loan Tenure (Years)</label>
-
-        <input type="number" id="loanYears" placeholder="Example: 5">
-
-      </div>
-
-    </div>
-
-    <div class="calc-buttons">
-
-      <button class="btn btn-primary" onclick="calculateEMI()">
-        Calculate EMI
-      </button>
-
-      <button class="btn btn-secondary" onclick="resetEMI()">
-        Reset
-      </button>
-
-    </div>
-
-    <div class="result" id="emiResult"></div>
-
-    <div class="formula">
-      <strong>Formula:</strong>
-      EMI = P × r × (1 + r)ⁿ ÷ [(1 + r)ⁿ − 1]
-      <br><br>
-      P = Principal loan amount, r = monthly interest rate, n = number of monthly instalments.
-    </div>
-
-  </div>
-
+</div>
+</div>
 </section>
 
+<!-- BMI -->
+<section>
+<div class="container">
+<div class="calculator">
 
-<!-- BMI CALCULATOR -->
+<h3>BMI Calculator</h3>
 
-<section class="calculator-section" id="bmi-calculator">
+<div class="input-group">
+<label>Age</label>
+<input type="number" id="bmiAge" placeholder="Age">
+</div>
 
-  <div class="calculator-card">
+<div class="input-group">
+<label>Height (cm)</label>
+<input type="number" id="height" placeholder="Height in cm">
+</div>
 
-    <h2>⚖️ BMI Calculator</h2>
+<div class="input-group">
+<label>Weight (kg)</label>
+<input type="number" id="weight" placeholder="Weight in kg">
+</div>
 
-    <p>
-      Calculate Body Mass Index using height and weight. BMI is a screening measure and should not be treated as a diagnosis.
-    </p>
+<button class="calc-btn" onclick="calculateBMI()">Calculate BMI</button>
 
-    <div class="calc-grid">
+<div class="result" id="bmiResult"></div>
 
-      <div class="input-group">
-
-        <label>Age (optional)</label>
-
-        <input type="number" id="bmiAge" min="1" max="120" placeholder="Example: 25">
-
-      </div>
-
-      <div class="input-group">
-
-        <label>Height (cm)</label>
-
-        <input type="number" id="bmiHeight" min="50" max="250" placeholder="Example: 170">
-
-      </div>
-
-      <div class="input-group">
-
-        <label>Weight (kg)</label>
-
-        <input type="number" id="bmiWeight" min="10" max="300" step="0.1" placeholder="Example: 65">
-
-      </div>
-
-    </div>
-
-    <div class="calc-buttons">
-
-      <button class="btn btn-primary" onclick="calculateBMI()">
-        Calculate BMI
-      </button>
-
-      <button class="btn btn-secondary" onclick="resetBMI()">
-        Reset
-      </button>
-
-    </div>
-
-    <div class="result bmi-result" id="bmiResult">
-
-      <h3>Your BMI</h3>
-
-      <div class="bmi-value" id="bmiValue">--</div>
-
-      <div class="bmi-category" id="bmiCategory"></div>
-
-      <div class="bmi-scale">
-        <div class="bmi-marker" id="bmiMarker"></div>
-      </div>
-
-      <p id="bmiMessage"></p>
-
-    </div>
-
-    <div class="note">
-      <strong>Important:</strong>
-      For people under 20, BMI should be interpreted using age- and sex-specific BMI-for-age percentiles rather than adult BMI categories. This calculator does not diagnose health conditions.
-    </div>
-
-    <div class="formula">
-      <strong>Formula:</strong>
-      BMI = Weight (kg) ÷ [Height (m) × Height (m)]
-    </div>
-
-  </div>
-
+</div>
+</div>
 </section>
-
 
 <!-- CGPA -->
+<section>
+<div class="container">
+<div class="calculator">
 
-<section class="calculator-section" id="cgpa-calculator">
+<h3>CGPA Calculator</h3>
 
-  <div class="calculator-card">
+<div class="input-group">
+<label>Enter CGPAs separated by commas</label>
+<input type="text" id="cgpaInput" placeholder="Example: 8.2, 7.5, 9, 8.6">
+</div>
 
-    <h2>🎓 CGPA Calculator</h2>
+<button class="calc-btn" onclick="calculateCGPA()">Calculate CGPA</button>
 
-    <p>
-      Enter the grade points for your subjects to calculate the average CGPA.
-    </p>
+<div class="result" id="cgpaResult"></div>
 
-    <div class="input-group">
-
-      <label>Grade Points</label>
-
-      <input
-        type="text"
-        id="gradePoints"
-        placeholder="Example: 8, 9, 7.5, 10, 8.5"
-      >
-
-    </div>
-
-    <div class="calc-buttons">
-
-      <button class="btn btn-primary" onclick="calculateCGPA()">
-        Calculate CGPA
-      </button>
-
-      <button class="btn btn-secondary" onclick="resetCGPA()">
-        Reset
-      </button>
-
-    </div>
-
-    <div class="result" id="cgpaResult"></div>
-
-    <div class="formula">
-      <strong>Formula:</strong>
-      CGPA = Sum of all subject grade points ÷ Number of subjects.
-    </div>
-
-  </div>
-
+</div>
+</div>
 </section>
-
 
 <!-- PERCENTAGE -->
+<section>
+<div class="container">
+<div class="calculator">
 
-<section class="calculator-section" id="percentage-calculator">
+<h3>Marks Percentage Calculator</h3>
 
-  <div class="calculator-card">
+<div class="input-group">
+<label>Obtained Marks</label>
+<input type="number" id="obtainedMarks">
+</div>
 
-    <h2>📊 Marks Percentage Calculator</h2>
+<div class="input-group">
+<label>Total Marks</label>
+<input type="number" id="totalMarks">
+</div>
 
-    <p>
-      Calculate your percentage from obtained marks and maximum marks.
-    </p>
+<button class="calc-btn" onclick="calculatePercentage()">Calculate Percentage</button>
 
-    <div class="calc-grid">
+<div class="result" id="percentageResult"></div>
 
-      <div class="input-group">
-
-        <label>Obtained Marks</label>
-
-        <input type="number" id="obtainedMarks" placeholder="Example: 425">
-
-      </div>
-
-      <div class="input-group">
-
-        <label>Total Marks</label>
-
-        <input type="number" id="totalMarks" placeholder="Example: 500">
-
-      </div>
-
-    </div>
-
-    <div class="calc-buttons">
-
-      <button class="btn btn-primary" onclick="calculatePercentage()">
-        Calculate Percentage
-      </button>
-
-      <button class="btn btn-secondary" onclick="resetPercentage()">
-        Reset
-      </button>
-
-    </div>
-
-    <div class="result" id="percentageResult"></div>
-
-    <div class="formula">
-      <strong>Formula:</strong>
-      Percentage = (Obtained Marks ÷ Total Marks) × 100
-    </div>
-
-  </div>
-
+</div>
+</div>
 </section>
-
 
 <!-- DISCOUNT -->
+<section>
+<div class="container">
+<div class="calculator">
 
-<section class="calculator-section" id="discount-calculator">
+<h3>Discount Calculator</h3>
 
-  <div class="calculator-card">
+<div class="input-group">
+<label>Original Price</label>
+<input type="number" id="originalPrice">
+</div>
 
-    <h2>🏷️ Discount Calculator</h2>
+<div class="input-group">
+<label>Discount (%)</label>
+<input type="number" id="discountPercent">
+</div>
 
-    <p>
-      Calculate how much discount you receive and the final price after discount.
-    </p>
+<button class="calc-btn" onclick="calculateDiscount()">Calculate Discount</button>
 
-    <div class="calc-grid">
+<div class="result" id="discountResult"></div>
 
-      <div class="input-group">
-
-        <label>Original Price (₹)</label>
-
-        <input type="number" id="originalPrice" placeholder="Example: 2000">
-
-      </div>
-
-      <div class="input-group">
-
-        <label>Discount (%)</label>
-
-        <input type="number" id="discountPercent" placeholder="Example: 20">
-
-      </div>
-
-    </div>
-
-    <div class="calc-buttons">
-
-      <button class="btn btn-primary" onclick="calculateDiscount()">
-        Calculate Discount
-      </button>
-
-      <button class="btn btn-secondary" onclick="resetDiscount()">
-        Reset
-      </button>
-
-    </div>
-
-    <div class="result" id="discountResult"></div>
-
-    <div class="formula">
-      <strong>Formula:</strong>
-      Discount Amount = Original Price × Discount Rate ÷ 100
-      <br>
-      Final Price = Original Price − Discount Amount
-    </div>
-
-  </div>
-
+</div>
+</div>
 </section>
-
 
 <!-- DATE -->
+<section>
+<div class="container">
+<div class="calculator">
 
-<section class="calculator-section" id="date-calculator">
+<h3>Date Difference Calculator</h3>
 
-  <div class="calculator-card">
+<div class="input-group">
+<label>Start Date</label>
+<input type="date" id="startDate">
+</div>
 
-    <h2>📅 Date Calculator</h2>
+<div class="input-group">
+<label>End Date</label>
+<input type="date" id="endDate">
+</div>
 
-    <p>
-      Find the exact number of days between two selected dates.
-    </p>
+<button class="calc-btn" onclick="calculateDateDifference()">Calculate Difference</button>
 
-    <div class="calc-grid">
+<div class="result" id="dateResult"></div>
 
-      <div class="input-group">
-
-        <label>Start Date</label>
-
-        <input type="date" id="startDate">
-
-      </div>
-
-      <div class="input-group">
-
-        <label>End Date</label>
-
-        <input type="date" id="endDate">
-
-      </div>
-
-    </div>
-
-    <div class="calc-buttons">
-
-      <button class="btn btn-primary" onclick="calculateDateDifference()">
-        Calculate Difference
-      </button>
-
-      <button class="btn btn-secondary" onclick="resetDate()">
-        Reset
-      </button>
-
-    </div>
-
-    <div class="result" id="dateResult"></div>
-
-    <div class="formula">
-      <strong>Formula:</strong>
-      Difference in days = Absolute difference between the two dates ÷ milliseconds in one day.
-    </div>
-
-  </div>
-
+</div>
+</div>
 </section>
 
+<!-- CHARACTER -->
+<section>
+<div class="container">
+<div class="calculator">
 
-<!-- CHARACTER COUNTER -->
+<h3>Character Counter</h3>
 
-<section class="calculator-section" id="character-counter">
+<div class="input-group">
+<label>Your Text</label>
+<textarea id="counterText" rows="7" oninput="countCharacters()"></textarea>
+</div>
 
-  <div class="calculator-card">
+<div class="result" id="counterResult">
+Characters: 0<br>
+Characters without spaces: 0<br>
+Words: 0<br>
+Sentences: 0<br>
+Lines: 0
+</div>
 
-    <h2>🔤 Character Counter</h2>
-
-    <p>
-      Count characters, words, sentences and spaces in your text instantly.
-    </p>
-
-    <div class="input-group">
-
-      <label>Your Text</label>
-
-      <textarea
-        id="counterText"
-        rows="9"
-        placeholder="Type or paste your text here..."
-        oninput="updateCharacterCounter()"
-      ></textarea>
-
-    </div>
-
-    <div class="result show" id="counterResult">
-
-      <strong>Characters:</strong>
-      <span id="charCount">0</span>
-      <br>
-
-      <strong>Characters without spaces:</strong>
-      <span id="charNoSpace">0</span>
-      <br>
-
-      <strong>Words:</strong>
-      <span id="wordCount">0</span>
-      <br>
-
-      <strong>Sentences:</strong>
-      <span id="sentenceCount">0</span>
-      <br>
-
-      <strong>Lines:</strong>
-      <span id="lineCount">0</span>
-
-    </div>
-
-    <div class="calc-buttons">
-
-      <button class="btn btn-secondary" onclick="resetCounter()">
-        Clear Text
-      </button>
-
-    </div>
-
-  </div>
-
+</div>
+</div>
 </section>
 
+<!-- CASE -->
+<section>
+<div class="container">
+<div class="calculator">
 
-<!-- CASE CONVERTER -->
+<h3>Case Converter</h3>
 
-<section class="calculator-section" id="case-converter">
+<div class="input-group">
+<label>Enter Text</label>
+<textarea id="caseText" rows="6"></textarea>
+</div>
 
-  <div class="calculator-card">
+<button class="calc-btn" onclick="convertCase('upper')">UPPERCASE</button>
+<button class="calc-btn" onclick="convertCase('lower')">lowercase</button>
+<button class="calc-btn" onclick="convertCase('title')">Title Case</button>
+<button class="calc-btn" onclick="convertCase('sentence')">Sentence Case</button>
 
-    <h2>🔠 Case Converter</h2>
+<div class="input-group" style="margin-top:15px;">
+<label>Converted Text</label>
+<textarea id="caseResult" rows="6"></textarea>
+</div>
 
-    <p>
-      Convert text into uppercase, lowercase, title case or sentence case.
-    </p>
-
-    <div class="input-group">
-
-      <label>Enter Text</label>
-
-      <textarea
-        id="caseText"
-        rows="9"
-        placeholder="Type or paste your text here..."
-      ></textarea>
-
-    </div>
-
-    <div class="calc-buttons">
-
-      <button class="btn btn-primary" onclick="convertUppercase()">
-        UPPERCASE
-      </button>
-
-      <button class="btn btn-primary" onclick="convertLowercase()">
-        lowercase
-      </button>
-
-      <button class="btn btn-primary" onclick="convertTitleCase()">
-        Title Case
-      </button>
-
-      <button class="btn btn-primary" onclick="convertSentenceCase()">
-        Sentence Case
-      </button>
-
-      <button class="btn btn-secondary" onclick="copyCaseText()">
-        Copy
-      </button>
-
-      <button class="btn btn-secondary" onclick="resetCase()">
-        Reset
-      </button>
-
-    </div>
-
-    <div class="formula">
-      <strong>How it works:</strong>
-      The converter uses JavaScript text-processing functions to transform the capitalization of your text instantly in your browser.
-    </div>
-
-  </div>
-
+</div>
+</div>
 </section>
 
+<!-- QR -->
+<section>
+<div class="container">
+<div class="calculator">
 
-<!-- TOOL DESCRIPTIONS -->
+<h3>QR Code Generator</h3>
 
-<section class="section">
+<div class="input-group">
+<label>Enter text or website URL</label>
+<input type="text" id="qrText" placeholder="https://example.com">
+</div>
 
-  <div class="section-title">
+<button class="calc-btn" onclick="generateQR()">Generate QR Code</button>
 
-    <h2>About Our Calculators & Tools</h2>
+<div id="qrcode" style="margin-top:20px;background:white;padding:15px;width:max-content;"></div>
 
-    <p>
-      Professional, simple and practical tools for everyday calculations.
-    </p>
-
-  </div>
-
-
-  <div class="description-box">
-
-    <h3>Age Calculator</h3>
-
-    <p>
-      The ToolNest Age Calculator helps users determine their age from a date of birth and a selected calculation date. Instead of simply subtracting years, the calculator considers months and days so that the result can provide a more precise age breakdown. It can be useful for students, form filling, planning events, checking age eligibility and everyday date-related calculations. The tool is designed to make date calculations quick and understandable without requiring manual calendar calculations.
-    </p>
-
-
-    <h3>EMI Calculator</h3>
-
-    <p>
-      The EMI Calculator is designed to estimate monthly loan payments using the principal amount, annual interest rate and loan tenure. It uses the standard reducing-balance EMI formula and provides the estimated monthly EMI, total interest and total repayment amount. This makes it useful for understanding the mathematical cost of a loan before making financial decisions. Actual loan payments can vary depending on lender policies, fees, taxes, interest-rate changes and other terms, so the calculator should be treated as an estimation tool rather than a financial guarantee.
-    </p>
-
-
-    <h3>BMI Calculator</h3>
-
-    <p>
-      The BMI Calculator calculates Body Mass Index from height and weight using the standard BMI formula. BMI is a population-level screening measure and does not directly diagnose an individual's health or describe body composition. For adults aged 20 and above, commonly used BMI categories can provide a general reference. For children and teenagers under 20, BMI needs to be interpreted using age- and sex-specific BMI-for-age percentiles. ToolNest therefore includes an important reminder not to apply adult BMI categories to people under 20. The calculator is intended for general information and should not replace professional medical advice.
-    </p>
-
-
-    <h3>CGPA Calculator</h3>
-
-    <p>
-      The CGPA Calculator helps students calculate the average of their grade points across multiple subjects. Users can enter grade points separated by commas and receive the average CGPA instantly. The tool can be useful for academic planning, checking results and understanding overall grade-point performance. Because schools, colleges and education boards may use different grading systems, users should confirm the official conversion rules applicable to their institution when converting CGPA into percentage or another grading format.
-    </p>
-
-
-    <h3>Marks Percentage Calculator</h3>
-
-    <p>
-      The Marks Percentage Calculator provides a simple way to calculate percentage from obtained marks and total marks. The standard formula is obtained marks divided by total marks multiplied by 100. Students can use it for individual examinations, assignments or overall marks calculations. The tool removes the need for manual arithmetic and provides the result immediately. It is especially useful when checking academic performance or preparing information for educational forms and records.
-    </p>
-
-
-    <h3>Discount Calculator</h3>
-
-    <p>
-      The Discount Calculator determines the discount amount and final price after a percentage discount is applied to an original price. It can be useful while comparing offers, understanding sale prices and performing everyday shopping calculations. For example, entering an original price and discount percentage allows the tool to show both the amount saved and the price after the discount. The calculation does not include additional taxes, delivery charges or other fees unless they are already included in the entered price.
-    </p>
-
-
-    <h3>Date Calculator</h3>
-
-    <p>
-      The Date Calculator helps users find the number of days between two dates. Date calculations can be useful for project planning, study schedules, deadlines, event planning, leave calculations and many other situations. ToolNest processes the selected dates and calculates their difference using JavaScript date functions. The result represents the mathematical difference between the selected calendar dates. Users should consider whether their particular situation requires inclusive counting, because some official forms and processes count both the starting and ending date.
-    </p>
-
-
-    <h3>Character Counter</h3>
-
-    <p>
-      The Character Counter is a useful writing and productivity tool that counts characters, characters without spaces, words, sentences and lines. It can help students, writers, content creators and anyone working with text limits. The counter updates automatically as text is entered, making it convenient for checking the length of an essay, description, application, social-media post or other written content. All calculations happen directly in the browser on this page, making the tool quick and convenient for ordinary text-counting tasks.
-    </p>
-
-
-    <h3>Case Converter</h3>
-
-    <p>
-      The Case Converter provides several text-formatting options, including uppercase, lowercase, title case and sentence case. It is useful when editing notes, preparing documents, cleaning copied text or changing the presentation of written content. Users can enter their text, choose a conversion option and copy the transformed result. The tool performs the conversion directly in the browser, allowing users to make quick formatting changes without installing additional software.
-    </p>
-
-  </div>
-
+</div>
+</div>
 </section>
-<!-- FAQ SECTION -->
 
-<section class="section" id="faq">
+<!-- STUDENT -->
+<section id="students">
+<div class="container">
 
-  <div class="section-title">
-    <h2>Frequently Asked Questions</h2>
-    <p>Common questions about ToolNest online calculators and tools.</p>
-  </div>
+<div class="section-title">
+<h2>Student Tools</h2>
+<p>Useful tools for school and college students.</p>
+</div>
 
-  <div class="description-box">
+<div class="tools-grid">
 
-    <h3>What is ToolNest?</h3>
-    <p>
-      ToolNest is a free online tools platform that provides calculators,
-      student tools and productivity utilities for everyday tasks.
-    </p>
+<div class="tool-card">
+<h3>CGPA Calculator</h3>
+<p>Quickly calculate average CGPA from multiple grades.</p>
+</div>
 
-    <h3>Are ToolNest calculators free to use?</h3>
-    <p>
-      Yes. The calculators and tools available on ToolNest are designed
-      to be free and easy to use without installing software.
-    </p>
+<div class="tool-card">
+<h3>Percentage Calculator</h3>
+<p>Calculate your marks percentage without manual calculation.</p>
+</div>
 
-    <h3>How does the Age Calculator work?</h3>
-    <p>
-      The Age Calculator compares the date of birth with the selected
-      calculation date and calculates the difference in years, months
-      and days.
-    </p>
+<div class="tool-card">
+<h3>Maths Quiz</h3>
+<p>Practice Class 9 Maths questions and check your score.</p>
+</div>
 
-    <h3>How is percentage calculated?</h3>
-    <p>
-      Percentage is calculated using the formula:
-      Obtained Marks ÷ Total Marks × 100.
-    </p>
+</div>
 
-    <h3>How does the EMI Calculator work?</h3>
-    <p>
-      The EMI Calculator uses the loan amount, annual interest rate and
-      loan tenure to estimate the monthly EMI, total interest and total
-      repayment amount.
-    </p>
+</div>
+</section>
 
-    <h3>Can students use ToolNest?</h3>
-    <p>
-      Yes. Students can use tools such as the percentage calculator,
-      CGPA calculator, age calculator, date calculator and character
-      counter for common academic and productivity tasks.
-    </p>
+<!-- MATH FORMULAS -->
+<section id="formulas">
+<div class="container">
 
-    <h3>Does the Character Counter count words?</h3>
-    <p>
-      Yes. The Character Counter can count characters, characters without
-      spaces, words, sentences and lines.
-    </p>
+<div class="section-title">
+<h2>Class 9 Maths Formulas</h2>
+<p>Important formulas for quick revision and practice.</p>
+</div>
 
-    <h3>Does ToolNest work on mobile phones?</h3>
-    <p>
-      Yes. The website uses a responsive design so that its tools can
-      be accessed from smartphones, tablets and desktop computers.
-    </p>
+<div class="formula-grid">
 
-  </div>
+<div class="formula-card">
+<h3>Number Systems</h3>
+<div class="formula">aᵐ × aⁿ = aᵐ⁺ⁿ</div>
+<div class="formula">aᵐ ÷ aⁿ = aᵐ⁻ⁿ</div>
+<div class="formula">(aᵐ)ⁿ = aᵐⁿ</div>
+</div>
 
+<div class="formula-card">
+<h3>Polynomials</h3>
+<div class="formula">(a + b)² = a² + 2ab + b²</div>
+<div class="formula">(a - b)² = a² - 2ab + b²</div>
+<div class="formula">a² - b² = (a-b)(a+b)</div>
+</div>
+
+<div class="formula-card">
+<h3>Coordinate Geometry</h3>
+<div class="formula">Point = (x, y)</div>
+<div class="formula">x-coordinate = Abscissa</div>
+<div class="formula">y-coordinate = Ordinate</div>
+</div>
+
+<div class="formula-card">
+<h3>Lines & Angles</h3>
+<div class="formula">Linear pair = 180°</div>
+<div class="formula">Angles around a point = 360°</div>
+<div class="formula">Vertically opposite angles are equal</div>
+</div>
+
+<div class="formula-card">
+<h3>Triangles</h3>
+<div class="formula">Sum of angles = 180°</div>
+<div class="formula">Area = ½ × base × height</div>
+<div class="formula">Pythagoras: c² = a² + b²</div>
+</div>
+
+<div class="formula-card">
+<h3>Quadrilaterals</h3>
+<div class="formula">Sum of angles = 360°</div>
+<div class="formula">Rectangle Area = l × b</div>
+<div class="formula">Square Area = a²</div>
+</div>
+
+<div class="formula-card">
+<h3>Circles</h3>
+<div class="formula">Diameter = 2r</div>
+<div class="formula">Circumference = 2πr</div>
+<div class="formula">Area = πr²</div>
+</div>
+
+<div class="formula-card">
+<h3>Heron's Formula</h3>
+<div class="formula">s = (a+b+c)/2</div>
+<div class="formula">Area = √[s(s-a)(s-b)(s-c)]</div>
+</div>
+
+<div class="formula-card">
+<h3>Surface Areas & Volumes</h3>
+<div class="formula">Cuboid Volume = lbh</div>
+<div class="formula">Cube Volume = a³</div>
+<div class="formula">Cylinder Volume = πr²h</div>
+</div>
+
+<div class="formula-card">
+<h3>Statistics</h3>
+<div class="formula">Mean = Sum of observations ÷ Number of observations</div>
+</div>
+
+<div class="formula-card">
+<h3>Probability</h3>
+<div class="formula">P(E) = Favourable outcomes ÷ Total outcomes</div>
+</div>
+
+<div class="formula-card">
+<h3>Area</h3>
+<div class="formula">Triangle = ½bh</div>
+<div class="formula">Rectangle = lb</div>
+<div class="formula">Parallelogram = bh</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- QUIZ -->
+<section id="quiz">
+<div class="container">
+
+<div class="section-title">
+<h2>Class 9 Maths Quiz</h2>
+<p>Answer all questions and check how many are correct.</p>
+</div>
+
+<div class="quiz-box">
+
+<form id="mathQuiz">
+
+<div class="question">
+<h3>1. यदि x = 3 हो, तो 2x² + 5 का मान क्या होगा?</h3>
+
+<label class="option">
+<input type="radio" name="q1" value="18"> 18
+</label>
+
+<label class="option">
+<input type="radio" name="q1" value="23"> 23
+</label>
+
+<label class="option">
+<input type="radio" name="q1" value="27"> 27
+</label>
+
+<label class="option">
+<input type="radio" name="q1" value="32"> 32
+</label>
+</div>
+
+<div class="question">
+<h3>2. एक त्रिभुज के दो कोण 50° और 60° हैं। तीसरा कोण कितना होगा?</h3>
+
+<label class="option">
+<input type="radio" name="q2" value="60"> 60°
+</label>
+
+<label class="option">
+<input type="radio" name="q2" value="70"> 70°
+</label>
+
+<label class="option">
+<input type="radio" name="q2" value="80"> 80°
+</label>
+
+<label class="option">
+<input type="radio" name="q2" value="90"> 90°
+</label>
+</div>
+
+<div class="question">
+<h3>3. एक वर्ग की भुजा 7 cm है। उसका क्षेत्रफल कितना होगा?</h3>
+
+<label class="option">
+<input type="radio" name="q3" value="14"> 14 cm²
+</label>
+
+<label class="option">
+<input type="radio" name="q3" value="28"> 28 cm²
+</label>
+
+<label class="option">
+<input type="radio" name="q3" value="49"> 49 cm²
+</label>
+
+<label class="option">
+<input type="radio" name="q3" value="56"> 56 cm²
+</label>
+</div>
+
+<div class="question">
+<h3>4. बहुपद 3x + 7 की घात क्या है?</h3>
+
+<label class="option">
+<input type="radio" name="q4" value="0"> 0
+</label>
+
+<label class="option">
+<input type="radio" name="q4" value="1"> 1
+</label>
+
+<label class="option">
+<input type="radio" name="q4" value="2"> 2
+</label>
+
+<label class="option">
+<input type="radio" name="q4" value="3"> 3
+</label>
+</div>
+
+<div class="question">
+<h3>5. एक आयत की लंबाई 12 cm और चौड़ाई 5 cm है। क्षेत्रफल कितना होगा?</h3>
+
+<label class="option">
+<input type="radio" name="q5" value="17"> 17 cm²
+</label>
+
+<label class="option">
+<input type="radio" name="q5" value="34"> 34 cm²
+</label>
+
+<label class="option">
+<input type="radio" name="q5" value="50"> 50 cm²
+</label>
+
+<label class="option">
+<input type="radio" name="q5" value="60"> 60 cm²
+</label>
+</div>
+
+<button type="button" class="calc-btn" onclick="submitQuiz()">
+Submit Quiz
+</button>
+
+<button type="button" class="calc-btn reset" onclick="resetQuiz()">
+Reset Quiz
+</button>
+
+</form>
+
+<div class="quiz-result" id="quizResult" style="display:none;"></div>
+
+</div>
+</div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+<div class="container">
+
+<div class="section-title">
+<h2>Frequently Asked Questions</h2>
+<p>Common questions about ToolNest.</p>
+</div>
+
+<div class="faq">
+
+<details>
+<summary>Is ToolNest free?</summary>
+<p>Yes. ToolNest is designed to provide free online calculators, student tools and productivity utilities.</p>
+</details>
+
+<details>
+<summary>Can students use ToolNest?</summary>
+<p>Yes. ToolNest includes student-focused tools such as CGPA, percentage, maths formulas and quizzes.</p>
+</details>
+
+<details>
+<summary>Can I use the EMI calculator for financial planning?</summary>
+<p>Yes. The EMI calculator can provide an estimate. Actual loan terms may differ depending on the lender and agreement.</p>
+</details>
+
+<details>
+<summary>Does ToolNest calculate BMI for teenagers?</summary>
+<p>The calculator can calculate the BMI value, but for people under 20, BMI should be interpreted using age- and sex-specific growth references rather than adult BMI categories.</p>
+</details>
+
+<details>
+<summary>Does ToolNest have a Maths Quiz?</summary>
+<p>Yes. The Class 9 Maths Quiz provides five multiple-choice questions and shows the number of correct and incorrect answers along with the score percentage.</p>
+</details>
+
+<details>
+<summary>Can I generate QR codes?</summary>
+<p>Yes. The QR Code Generator can create a QR code from text or a website address.</p>
+</details>
+
+</div>
+</div>
 </section>
 
 <!-- ABOUT -->
+<section>
+<div class="container">
 
-<section class="about" id="about">
+<div class="section-title">
+<h2>About ToolNest</h2>
+</div>
 
-  <div class="section about-content">
+<div class="about">
 
-    <h2>About ToolNest</h2>
+<p>
+ToolNest is a free online tools website created to make everyday calculations
+and student tasks easier.
+</p>
 
-    <p>
-      ToolNest is a free online tools platform created with a simple objective: make useful digital tools accessible, understandable and convenient for everyone. Many everyday tasks require small calculations or text-processing utilities, but users often have to search through multiple websites to find a suitable tool. ToolNest brings several practical utilities together in one organized platform so that users can complete common tasks quickly from a computer, tablet or smartphone.
-    </p>
+<p>
+The website brings useful calculators, educational tools, maths formulas,
+quizzes and productivity utilities together in one place.
+</p>
 
-    <p>
-      The platform focuses on calculators and productivity tools that are useful in everyday situations. Students can use the Marks Percentage Calculator and CGPA Calculator to check academic calculations. Users planning loans can use the EMI Calculator to understand estimated monthly payments and total repayment. The Age Calculator and Date Calculator can simplify calendar-related calculations, while the Discount Calculator can help users understand sale prices. Text-focused utilities such as the Character Counter and Case Converter are designed for writing, studying, editing and content creation.
-    </p>
+<p>
+ToolNest aims to keep its tools simple, fast and easy to use on both mobile
+devices and computers.
+</p>
 
-    <h3>Designed for Simplicity</h3>
+<p>
+Financial calculators provide estimates and should not be treated as
+professional financial advice. Users should verify important financial
+decisions with the relevant lender or qualified professional.
+</p>
 
-    <p>
-      A useful online tool should not require a complicated learning process. ToolNest follows a straightforward design approach in which users enter information, select an appropriate action and receive a clear result. Buttons, labels and result areas are designed to be easy to understand. The website also uses a responsive layout so that the tools can remain practical on different screen sizes. This makes ToolNest suitable for students working from mobile devices as well as users accessing the platform from desktop computers.
-    </p>
-
-    <h3>Useful for Students</h3>
-
-    <p>
-      Students are one of the important audiences for ToolNest. Academic life often involves percentage calculations, grade points, deadlines, written assignments and other small tasks where a reliable calculator can save time. Instead of performing repetitive calculations manually, students can use ToolNest to check mathematical results quickly. The tools are intended to support learning and productivity rather than replace understanding. Students should always follow the official rules of their school, college or examination board when an institution uses a specific calculation or grading method.
-    </p>
-
-    <h3>Practical Calculations</h3>
-
-    <p>
-      Each calculator is built around a clearly defined mathematical method. The percentage calculator uses the standard percentage formula, the EMI calculator uses the standard reducing-balance EMI equation, the discount calculator separates the discount amount from the final price, and the CGPA calculator calculates an average from entered grade points. The date and age tools use calendar-based calculations. Providing formulas alongside calculators makes the platform more educational because users can understand how a result is produced rather than seeing only a final number.
-    </p>
-
-    <h3>Privacy and Browser-Based Tools</h3>
-
-    <p>
-      ToolNest is designed so that many of its basic calculations can be performed directly inside the user's browser using JavaScript. For these browser-based tools, the calculation itself does not need to be sent to a remote calculation server. This approach helps make simple tools fast and convenient. Users should still avoid entering confidential, financial-account credentials, passwords or other sensitive information into any general-purpose online tool unless they understand the site's data practices.
-    </p>
-
-    <h3>Accuracy and Responsible Use</h3>
-
-    <p>
-      ToolNest aims to provide mathematically consistent results based on the information entered by the user. However, calculators are tools for estimation and calculation, not substitutes for professional decisions. For example, an EMI result may differ from a lender's actual repayment because of fees or loan terms. Similarly, BMI is only a screening measure and should not be interpreted as a medical diagnosis. Users should verify important results with the relevant official source, institution or qualified professional when accuracy has significant consequences.
-    </p>
-
-    <h3>A Growing Collection of Tools</h3>
-
-    <p>
-      ToolNest is designed as a growing collection rather than a platform limited to one category. The long-term goal is to provide practical calculators, educational utilities, productivity tools and other helpful browser-based resources in an organized environment. Future improvements can include additional calculators, better accessibility, improved mobile experiences, more educational explanations and new tools based on genuine user needs.
-    </p>
-
-    <p>
-      Ultimately, ToolNest is built around a simple principle: useful technology should save time instead of creating unnecessary complexity. Whether someone needs to calculate a percentage before submitting an assignment, estimate an EMI, check a date difference, count words in an article or quickly change text capitalization, the platform aims to provide a focused solution in a few clicks. By combining clear explanations with functional tools, ToolNest aims to become a dependable destination for everyday online calculations and productivity tasks.
-    </p>
-
-  </div>
-
+</div>
+</div>
 </section>
 
-
 <!-- FOOTER -->
-
 <footer>
+<div class="container footer-inner">
 
-  <div class="footer-container">
+<div>
+<div class="footer-logo">ToolNest</div>
+<p>Free tools for students and everyday tasks.</p>
+</div>
 
-    <div>
+<div>
+<p>
+<a href="#tools">Tools</a> ·
+<a href="#formulas">Math Formulas</a> ·
+<a href="#quiz">Quiz</a> ·
+<a href="#faq">FAQ</a> ·
+<a href="blog.html">Blog</a>
+</p>
+</div>
 
-      <h3>ToolNest</h3>
+</div>
 
-      <p>
-        Free online calculators, student tools and productivity utilities designed to make everyday digital tasks easier.
-      </p>
-
-    </div>
-
-    <div>
-
-      <h3>Calculators</h3>
-
-      <a href="#age-calculator">Age Calculator</a>
-      <a href="#emi-calculator">EMI Calculator</a>
-      <a href="#bmi-calculator">BMI Calculator</a>
-      <a href="#cgpa-calculator">CGPA Calculator</a>
-      <a href="#percentage-calculator">Percentage Calculator</a>
-
-    </div>
-
-    <div>
-
-      <h3>Tools</h3>
-
-      <a href="#discount-calculator">Discount Calculator</a>
-      <a href="#date-calculator">Date Calculator</a>
-      <a href="#character-counter">Character Counter</a>
-      <a href="#case-converter">Case Converter</a>
-      <a href="#about">About ToolNest</a>
-
-    </div>
-
-  </div>
-
-  <div class="copyright">
-    © 2026 ToolNest. All rights reserved.
-  </div>
-
+<div class="container" style="margin-top:25px;border-top:1px solid #10263e;padding-top:20px;">
+<p>© 2026 ToolNest. All rights reserved.</p>
+</div>
 </footer>
-
-
-<!-- JAVASCRIPT -->
 
 <script>
 
+/* AGE CALCULATOR */
+function calculateAge(){
 
-/* =========================
-   AGE CALCULATOR
-========================= */
+  const dobValue=document.getElementById("dob").value;
+  const result=document.getElementById("ageResult");
 
-function calculateAge() {
-
-  const dobValue = document.getElementById("dob").value;
-  const ageDateValue = document.getElementById("ageDate").value;
-  const result = document.getElementById("ageResult");
-
-  if (!dobValue || !ageDateValue) {
-
-    result.innerHTML = "Please select both dates.";
-    result.classList.add("show");
+  if(!dobValue){
+    result.innerHTML="Please select your date of birth.";
     return;
-
   }
 
-  const dob = new Date(dobValue + "T00:00:00");
-  const end = new Date(ageDateValue + "T00:00:00");
+  const dob=new Date(dobValue);
+  const today=new Date();
 
-  if (dob > end) {
-
-    result.innerHTML = "The date of birth cannot be after the calculation date.";
-    result.classList.add("show");
+  if(dob>today){
+    result.innerHTML="Date of birth cannot be in the future.";
     return;
-
   }
 
-  let years = end.getFullYear() - dob.getFullYear();
-  let months = end.getMonth() - dob.getMonth();
-  let days = end.getDate() - dob.getDate();
+  let years=today.getFullYear()-dob.getFullYear();
+  let months=today.getMonth()-dob.getMonth();
+  let days=today.getDate()-dob.getDate();
 
-  if (days < 0) {
-
+  if(days<0){
     months--;
-
-    const previousMonth = new Date(
-      end.getFullYear(),
-      end.getMonth(),
+    days+=new Date(
+      today.getFullYear(),
+      today.getMonth(),
       0
-    );
-
-    days += previousMonth.getDate();
-
+    ).getDate();
   }
 
-  if (months < 0) {
-
+  if(months<0){
     years--;
-    months += 12;
-
+    months+=12;
   }
 
-  result.innerHTML = `
-    <h3>Your Exact Age</h3>
-    <div class="big-result">${years} Years, ${months} Months, ${days} Days</div>
-  `;
-
-  result.classList.add("show");
+  result.innerHTML=
+    "Your age is <strong>"+years+
+    " years, "+months+
+    " months, and "+days+" days.</strong>";
 }
 
 
-function resetAge() {
+/* EMI */
+function calculateEMI(){
 
-  document.getElementById("dob").value = "";
-  document.getElementById("ageDate").value = "";
-  document.getElementById("ageResult").classList.remove("show");
+  const P=parseFloat(document.getElementById("loanAmount").value);
+  const annual=parseFloat(document.getElementById("interestRate").value);
+  const years=parseFloat(document.getElementById("loanYears").value);
+  const result=document.getElementById("emiResult");
 
-}
-
-
-/* Set today's date */
-
-function setTodayDate() {
-
-  const today = new Date();
-
-  const yyyy = today.getFullYear();
-  const mm = String(today.getMonth() + 1).padStart(2, "0");
-  const dd = String(today.getDate()).padStart(2, "0");
-
-  document.getElementById("ageDate").value =
-    `${yyyy}-${mm}-${dd}`;
-
-}
-
-
-/* =========================
-   EMI CALCULATOR
-========================= */
-
-function calculateEMI() {
-
-  const P = parseFloat(document.getElementById("loanAmount").value);
-  const annualRate = parseFloat(document.getElementById("interestRate").value);
-  const years = parseFloat(document.getElementById("loanYears").value);
-
-  const result = document.getElementById("emiResult");
-
-  if (
-    isNaN(P) ||
-    isNaN(annualRate) ||
-    isNaN(years) ||
-    P <= 0 ||
-    annualRate < 0 ||
-    years <= 0
-  ) {
-
-    result.innerHTML = "Please enter valid loan details.";
-    result.classList.add("show");
+  if(!P || P<=0 || annual<0 || !years || years<=0){
+    result.innerHTML="Please enter valid loan details.";
     return;
-
   }
 
-  const n = years * 12;
-  const r = annualRate / 12 / 100;
+  const r=annual/12/100;
+  const n=years*12;
 
   let emi;
 
-  if (r === 0) {
-
-    emi = P / n;
-
-  } else {
-
-    emi =
-      P *
-      r *
-      Math.pow(1 + r, n) /
-      (Math.pow(1 + r, n) - 1);
-
+  if(r===0){
+    emi=P/n;
+  }else{
+    emi=P*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1);
   }
 
-  const totalPayment = emi * n;
-  const totalInterest = totalPayment - P;
+  const total=emi*n;
+  const interest=total-P;
 
-  result.innerHTML = `
-    <h3>Loan Calculation</h3>
-
-    <p>Monthly EMI</p>
-    <div class="big-result">
-      ₹${emi.toLocaleString("en-IN", {
-        maximumFractionDigits: 2
-      })}
-    </div>
-
-    <br>
-
-    <strong>Total Interest:</strong>
-    ₹${totalInterest.toLocaleString("en-IN", {
-      maximumFractionDigits: 2
-    })}
-
-    <br>
-
-    <strong>Total Repayment:</strong>
-    ₹${totalPayment.toLocaleString("en-IN", {
-      maximumFractionDigits: 2
-    })}
-  `;
-
-  result.classList.add("show");
-
+  result.innerHTML=
+    "Monthly EMI: <strong>₹"+emi.toFixed(2)+
+    "</strong><br>Total Payment: ₹"+total.toFixed(2)+
+    "<br>Total Interest: ₹"+interest.toFixed(2);
 }
 
 
-function resetEMI() {
+/* BMI */
+function calculateBMI(){
 
-  document.getElementById("loanAmount").value = "";
-  document.getElementById("interestRate").value = "";
-  document.getElementById("loanYears").value = "";
-  document.getElementById("emiResult").classList.remove("show");
+  const age=parseFloat(document.getElementById("bmiAge").value);
+  const height=parseFloat(document.getElementById("height").value);
+  const weight=parseFloat(document.getElementById("weight").value);
+  const result=document.getElementById("bmiResult");
 
-}
-
-
-/* =========================
-   BMI CALCULATOR
-========================= */
-
-function calculateBMI() {
-
-  const age = parseFloat(document.getElementById("bmiAge").value);
-  const heightCm = parseFloat(document.getElementById("bmiHeight").value);
-  const weightKg = parseFloat(document.getElementById("bmiWeight").value);
-
-  const result = document.getElementById("bmiResult");
-  const value = document.getElementById("bmiValue");
-  const category = document.getElementById("bmiCategory");
-  const message = document.getElementById("bmiMessage");
-  const marker = document.getElementById("bmiMarker");
-
-  if (
-    isNaN(heightCm) ||
-    isNaN(weightKg) ||
-    heightCm <= 0 ||
-    weightKg <= 0
-  ) {
-
-    alert("Please enter valid height and weight.");
+  if(!age || age<=0 || !height || height<=0 || !weight || weight<=0){
+    result.innerHTML="Please enter valid age, height and weight.";
     return;
-
   }
 
-  const heightM = heightCm / 100;
+  const meters=height/100;
+  const bmi=weight/(meters*meters);
 
-  const bmi = weightKg / (heightM * heightM);
+  if(age<20){
 
-  value.textContent = bmi.toFixed(1);
+    result.innerHTML=
+      "BMI: <strong>"+bmi.toFixed(2)+
+      "</strong><br><br>"+
+      "For people under 20, BMI should be interpreted using "+
+      "age- and sex-specific growth references. This calculator "+
+      "does not assign adult BMI categories.";
 
-  /*
-    Adult BMI interpretation is only used
-    when age is known and is 20 or above.
-  */
+  }else{
 
-  if (!isNaN(age) && age < 20) {
+    let category;
 
-    category.textContent =
-      "BMI-for-age percentile required";
+    if(bmi<18.5) category="Below adult reference range";
+    else if(bmi<25) category="Within adult reference range";
+    else if(bmi<30) category="Above adult reference range";
+    else category="30 or above";
 
-    message.textContent =
-      "For people under 20, BMI should be interpreted using age- and sex-specific BMI-for-age percentiles. This calculator does not provide adult BMI categories.";
-
-    marker.style.left = "50%";
-
-  } else {
-
-    let cat = "";
-
-    if (bmi < 18.5) {
-
-      cat = "Underweight";
-
-    } else if (bmi < 25) {
-
-      cat = "Healthy weight range";
-
-    } else if (bmi < 30) {
-
-      cat = "Overweight";
-
-    } else {
-
-      cat = "Obesity range";
-
-    }
-
-    category.textContent = cat;
-
-    message.textContent =
-      "For adults 20+, these are general BMI screening categories and are not a diagnosis.";
-
-    let position = (bmi / 40) * 100;
-
-    position = Math.max(0, Math.min(position, 100));
-
-    marker.style.left = position + "%";
-
+    result.innerHTML=
+      "BMI: <strong>"+bmi.toFixed(2)+
+      "</strong><br>Adult reference category: "+
+      "<strong>"+category+"</strong>";
   }
-
-  result.classList.add("show");
-
 }
 
 
-function resetBMI() {
+/* CGPA */
+function calculateCGPA(){
 
-  document.getElementById("bmiAge").value = "";
-  document.getElementById("bmiHeight").value = "";
-  document.getElementById("bmiWeight").value = "";
+  const input=document.getElementById("cgpaInput").value.trim();
+  const result=document.getElementById("cgpaResult");
 
-  document.getElementById("bmiResult").classList.remove("show");
-
-}
-
-
-/* =========================
-   CGPA CALCULATOR
-========================= */
-
-function calculateCGPA() {
-
-  const input =
-    document.getElementById("gradePoints").value.trim();
-
-  const result =
-    document.getElementById("cgpaResult");
-
-  if (!input) {
-
-    result.innerHTML =
-      "Please enter your grade points.";
-
-    result.classList.add("show");
+  if(!input){
+    result.innerHTML="Please enter CGPA values.";
     return;
-
   }
 
-  const values = input
-    .split(",")
-    .map(Number)
-    .filter(v => !isNaN(v));
+  const parts=input.split(",");
 
-  if (values.length === 0) {
+  const values=parts.map(v=>parseFloat(v.trim()));
 
-    result.innerHTML =
-      "Please enter valid grade points.";
-
-    result.classList.add("show");
+  if(values.some(v=>Number.isNaN(v))){
+    result.innerHTML="Please enter only valid numbers separated by commas.";
     return;
-
   }
 
-  const sum =
-    values.reduce((a,b) => a+b, 0);
+  const average=
+    values.reduce((sum,value)=>sum+value,0)/values.length;
 
-  const cgpa =
-    sum / values.length;
-
-  result.innerHTML = `
-    <h3>Your CGPA</h3>
-    <div class="big-result">${cgpa.toFixed(2)}</div>
-    <p>Subjects counted: ${values.length}</p>
-  `;
-
-  result.classList.add("show");
-
+  result.innerHTML=
+    "Average CGPA: <strong>"+average.toFixed(2)+"</strong>";
 }
 
 
-function resetCGPA() {
+/* PERCENTAGE */
+function calculatePercentage(){
 
-  document.getElementById("gradePoints").value = "";
+  const obtained=parseFloat(
+    document.getElementById("obtainedMarks").value
+  );
 
-  document.getElementById("cgpaResult")
-    .classList.remove("show");
+  const total=parseFloat(
+    document.getElementById("totalMarks").value
+  );
 
-}
+  const result=document.getElementById("percentageResult");
 
-
-/* =========================
-   PERCENTAGE
-========================= */
-
-function calculatePercentage() {
-
-  const obtained =
-    parseFloat(document.getElementById("obtainedMarks").value);
-
-  const total =
-    parseFloat(document.getElementById("totalMarks").value);
-
-  const result =
-    document.getElementById("percentageResult");
-
-  if (
-    isNaN(obtained) ||
-    isNaN(total) ||
-    total <= 0 ||
-    obtained < 0 ||
-    obtained > total
-  ) {
-
-    result.innerHTML =
-      "Please enter valid marks.";
-
-    result.classList.add("show");
+  if(
+    !Number.isFinite(obtained) ||
+    !Number.isFinite(total) ||
+    total<=0 ||
+    obtained<0 ||
+    obtained>total
+  ){
+    result.innerHTML="Please enter valid marks.";
     return;
-
   }
 
-  const percentage =
-    (obtained / total) * 100;
+  const percentage=(obtained/total)*100;
 
-  result.innerHTML = `
-    <h3>Your Percentage</h3>
-    <div class="big-result">
-      ${percentage.toFixed(2)}%
-    </div>
-  `;
-
-  result.classList.add("show");
-
+  result.innerHTML=
+    "Percentage: <strong>"+percentage.toFixed(2)+"%</strong>";
 }
 
 
-function resetPercentage() {
+/* DISCOUNT */
+function calculateDiscount(){
 
-  document.getElementById("obtainedMarks").value = "";
-  document.getElementById("totalMarks").value = "";
+  const price=parseFloat(
+    document.getElementById("originalPrice").value
+  );
 
-  document.getElementById("percentageResult")
-    .classList.remove("show");
+  const discount=parseFloat(
+    document.getElementById("discountPercent").value
+  );
 
-}
+  const result=document.getElementById("discountResult");
 
-
-/* =========================
-   DISCOUNT
-========================= */
-
-function calculateDiscount() {
-
-  const price =
-    parseFloat(document.getElementById("originalPrice").value);
-
-  const discount =
-    parseFloat(document.getElementById("discountPercent").value);
-
-  const result =
-    document.getElementById("discountResult");
-
-  if (
-    isNaN(price) ||
-    isNaN(discount) ||
-    price < 0 ||
-    discount < 0 ||
-    discount > 100
-  ) {
-
-    result.innerHTML =
-      "Please enter valid price and discount.";
-
-    result.classList.add("show");
+  if(
+    !Number.isFinite(price) ||
+    !Number.isFinite(discount) ||
+    price<0 ||
+    discount<0 ||
+    discount>100
+  ){
+    result.innerHTML="Please enter valid price and discount.";
     return;
-
   }
 
-  const discountAmount =
-    price * discount / 100;
+  const amount=price*discount/100;
+  const finalPrice=price-amount;
 
-  const finalPrice =
-    price - discountAmount;
-
-  result.innerHTML = `
-    <h3>Discount Result</h3>
-
-    <strong>Discount Amount:</strong>
-    ₹${discountAmount.toLocaleString("en-IN", {
-      maximumFractionDigits: 2
-    })}
-
-    <br><br>
-
-    <strong>Final Price:</strong>
-
-    <div class="big-result">
-      ₹${finalPrice.toLocaleString("en-IN", {
-        maximumFractionDigits: 2
-      })}
-    </div>
-  `;
-
-  result.classList.add("show");
-
+  result.innerHTML=
+    "Discount Amount: <strong>₹"+amount.toFixed(2)+
+    "</strong><br>Final Price: <strong>₹"+
+    finalPrice.toFixed(2)+"</strong>";
 }
 
 
-function resetDiscount() {
+/* DATE DIFFERENCE */
+function calculateDateDifference(){
 
-  document.getElementById("originalPrice").value = "";
-  document.getElementById("discountPercent").value = "";
+  const start=document.getElementById("startDate").value;
+  const end=document.getElementById("endDate").value;
 
-  document.getElementById("discountResult")
-    .classList.remove("show");
+  const result=document.getElementById("dateResult");
 
-}
-
-
-/* =========================
-   DATE CALCULATOR
-========================= */
-
-function calculateDateDifference() {
-
-  const startValue =
-    document.getElementById("startDate").value;
-
-  const endValue =
-    document.getElementById("endDate").value;
-
-  const result =
-    document.getElementById("dateResult");
-
-  if (!startValue || !endValue) {
-
-    result.innerHTML =
-      "Please select both dates.";
-
-    result.classList.add("show");
+  if(!start || !end){
+    result.innerHTML="Please select both dates.";
     return;
-
   }
 
-  const start =
-    new Date(startValue + "T00:00:00");
+  const startDate=new Date(start+"T00:00:00");
+  const endDate=new Date(end+"T00:00:00");
 
-  const end =
-    new Date(endValue + "T00:00:00");
+  const difference=Math.abs(
+    endDate-startDate
+  );
 
-  const milliseconds =
-    Math.abs(end - start);
+  const days=Math.round(
+    difference/(1000*60*60*24)
+  );
 
-  const days =
-    Math.round(milliseconds / 86400000);
-
-  result.innerHTML = `
-    <h3>Date Difference</h3>
-
-    <div class="big-result">
-      ${days} Days
-    </div>
-
-    <p>
-      Approximately ${(days / 7).toFixed(2)} weeks.
-    </p>
-  `;
-
-  result.classList.add("show");
-
+  result.innerHTML=
+    "Difference: <strong>"+days+" days</strong>";
 }
 
 
-function resetDate() {
+/* CHARACTER COUNTER */
+function countCharacters(){
 
-  document.getElementById("startDate").value = "";
-  document.getElementById("endDate").value = "";
+  const text=document.getElementById("counterText").value;
 
-  document.getElementById("dateResult")
-    .classList.remove("show");
+  const characters=text.length;
 
+  const noSpaces=text.replace(/\s/g,"").length;
+
+  const words=text.trim()
+    ? text.trim().split(/\s+/).length
+    : 0;
+
+  const sentences=text.trim()
+    ? (text.match(/[.!?]+/g)||[]).length
+    : 0;
+
+  const lines=text
+    ? text.split(/\r?\n/).length
+    : 0;
+
+  document.getElementById("counterResult").innerHTML=
+    "Characters: <strong>"+characters+
+    "</strong><br>Characters without spaces: <strong>"+
+    noSpaces+
+    "</strong><br>Words: <strong>"+
+    words+
+    "</strong><br>Sentences: <strong>"+
+    sentences+
+    "</strong><br>Lines: <strong>"+
+    lines+"</strong>";
 }
 
 
-/* =========================
-   CHARACTER COUNTER
-========================= */
+/* CASE CONVERTER */
+function convertCase(type){
 
-function updateCharacterCounter() {
+  const text=document.getElementById("caseText").value;
 
-  const text =
-    document.getElementById("counterText").value;
+  let output="";
 
-  const characters =
-    text.length;
+  if(type==="upper"){
+    output=text.toUpperCase();
+  }
 
-  const withoutSpaces =
-    text.replace(/\s/g, "").length;
+  else if(type==="lower"){
+    output=text.toLowerCase();
+  }
 
-  const words =
-    text.trim() === ""
-      ? 0
-      : text.trim().split(/\s+/).length;
+  else if(type==="title"){
 
-  const sentences =
-    text.trim() === ""
-      ? 0
-      : text.split(/[.!?]+/)
-          .filter(s => s.trim().length > 0)
-          .length;
-
-  const lines =
-    text === ""
-      ? 0
-      : text.split(/\r?\n/).length;
-
-  document.getElementById("charCount")
-    .textContent = characters;
-
-  document.getElementById("charNoSpace")
-    .textContent = withoutSpaces;
-
-  document.getElementById("wordCount")
-    .textContent = words;
-
-  document.getElementById("sentenceCount")
-    .textContent = sentences;
-
-  document.getElementById("lineCount")
-    .textContent = lines;
-
-}
-
-
-function resetCounter() {
-
-  document.getElementById("counterText").value = "";
-
-  updateCharacterCounter();
-
-}
-
-
-/* =========================
-   CASE CONVERTER
-========================= */
-
-function convertUppercase() {
-
-  const text =
-    document.getElementById("caseText");
-
-  text.value =
-    text.value.toUpperCase();
-
-}
-
-
-function convertLowercase() {
-
-  const text =
-    document.getElementById("caseText");
-
-  text.value =
-    text.value.toLowerCase();
-
-}
-
-
-function convertTitleCase() {
-
-  const text =
-    document.getElementById("caseText");
-
-  text.value =
-    text.value
-      .toLowerCase()
-      .replace(/\b\w/g, char => char.toUpperCase());
-
-}
-
-
-function convertSentenceCase() {
-
-  const text =
-    document.getElementById("caseText");
-
-  let value =
-    text.value.toLowerCase();
-
-  text.value =
-    value.replace(
-      /(^\s*\w|[.!?]\s+\w)/g,
-      char => char.toUpperCase()
+    output=text.toLowerCase().replace(
+      /\b\w/g,
+      letter=>letter.toUpperCase()
     );
 
+  }
+
+  else if(type==="sentence"){
+
+    output=text.toLowerCase().replace(
+      /(^\s*\w|[.!?]\s*\w)/g,
+      letter=>letter.toUpperCase()
+    );
+
+  }
+
+  document.getElementById("caseResult").value=output;
 }
 
 
-async function copyCaseText() {
+/* QR CODE */
+function generateQR(){
 
-  const text =
-    document.getElementById("caseText").value;
+  const text=document.getElementById("qrText").value.trim();
+  const qr=document.getElementById("qrcode");
 
-  if (!text) {
+  qr.innerHTML="";
 
-    alert("There is no text to copy.");
+  if(!text){
+    qr.innerHTML="<p style='color:#111;'>Enter text or URL first.</p>";
     return;
-
   }
 
-  try {
-
-    await navigator.clipboard.writeText(text);
-
-    alert("Text copied successfully!");
-
-  } catch {
-
-    alert("Copy failed. Please copy the text manually.");
-
-  }
-
+  new QRCode(qr,{
+    text:text,
+    width:200,
+    height:200
+  });
 }
 
 
-function resetCase() {
+/* TOOL SEARCH */
+function searchTools(){
 
-  document.getElementById("caseText").value = "";
+  const query=document
+    .getElementById("toolSearch")
+    .value
+    .toLowerCase();
 
+  const cards=document.querySelectorAll(
+    "#toolGrid .tool-card"
+  );
+
+  cards.forEach(card=>{
+
+    const text=card.innerText.toLowerCase();
+
+    card.style.display=
+      text.includes(query) ? "" : "none";
+
+  });
 }
 
 
-/* =========================
-   PAGE INITIALIZATION
-========================= */
+/* MATH QUIZ */
+function submitQuiz(){
 
-window.addEventListener("DOMContentLoaded", function() {
+  const answers={
+    q1:"23",
+    q2:"70",
+    q3:"49",
+    q4:"1",
+    q5:"60"
+  };
 
-  setTodayDate();
+  let correct=0;
+  let answered=0;
 
-});
+  Object.keys(answers).forEach(question=>{
+
+    const selected=document.querySelector(
+      'input[name="'+question+'"]:checked'
+    );
+
+    if(selected){
+
+      answered++;
+
+      if(selected.value===answers[question]){
+        correct++;
+      }
+    }
+
+  });
+
+  const total=Object.keys(answers).length;
+  const wrong=answered-correct;
+  const unanswered=total-answered;
+  const score=(correct/total)*100;
+
+  const result=document.getElementById("quizResult");
+
+  result.style.display="block";
+
+  result.innerHTML=
+    "<div class='score-number'>"+score.toFixed(0)+"%</div>"+
+    "<br>"+
+    "✅ सही: <strong>"+correct+"</strong><br>"+
+    "❌ गलत: <strong>"+wrong+"</strong><br>"+
+    "⚪ Unanswered: <strong>"+unanswered+"</strong><br>"+
+    "📊 Total Questions: <strong>"+total+"</strong>";
+
+  result.scrollIntoView({
+    behavior:"smooth",
+    block:"center"
+  });
+}
+
+
+/* RESET QUIZ */
+function resetQuiz(){
+
+  document.getElementById("mathQuiz").reset();
+
+  const result=document.getElementById("quizResult");
+
+  result.style.display="none";
+  result.innerHTML="";
+}
 
 </script>
 
